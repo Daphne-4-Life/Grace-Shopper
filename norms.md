@@ -41,3 +41,5 @@ Is it okay to work on your own after hours? How do we keep the group informed? D
 What time does this group have daily stand up?
 
 * 11:15am for get together (with Dan), 2:30pm after lunch, and 5pm for wind down / review / discussions. (subject to change, again communication is key!)
+
+Making sure this works.

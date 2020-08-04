@@ -2,17 +2,62 @@
 
 const db = require('../server/db')
 const {User} = require('../server/db/models')
+const {Item} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
   const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+    User.create({
+      firstName: 'cody',
+      lastName: 'smith',
+      email: 'cody@email.com',
+      password: '123',
+      address: '123 10th St, Ny Ny 11249'
+    }),
+    User.create({
+      firstName: 'sally',
+      lastName: 'murphy',
+      email: 'murphy@email.com',
+      password: '123',
+      address: '312 20th St, Ny Ny 11249'
+    })
+  ])
+
+  const items = await Promise.all([
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      size: 'med',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      size: 'sm',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      size: 'med',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      size: 'lg',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    })
   ])
 
   console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${items.length} users`)
   console.log(`seeded successfully`)
 }
 

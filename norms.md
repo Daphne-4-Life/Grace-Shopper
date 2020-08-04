@@ -1,22 +1,20 @@
 Establishing Norms
 
-
 Each group should discuss and provide an answer for the following questions
 
-1. What does this group do when two or more members disagree (ex. on a technical approach, a technology choice, etc)?
-Do you vote? Does the whole group get involved? Do you get someone else to decide?
+1.  What does this group do when two or more members disagree (ex. on a technical approach, a technology choice, etc)?
+    Do you vote? Does the whole group get involved? Do you get someone else to decide?
 
 * Vote / group discussion
-
 
 What does this group do when a member is frustrated?
 What strategy do you use to talk about it? What do you do if you're the frustrated person? What do you do if you're the person someone is frustrated with? Imagine a situation where Person A thinks that Person B is not pulling their weight - write a script for how you think that conversation should go.
 
 * Talk it out, tell funny jokes and vibe with pizza.
 * script:
+
 - Hey this project is bumming me out, I can't figure out this bug on the nav bar
 - Don't worry, lets talk it out. let me order all of us some pizza on me and we're good to go
-
 
 What does this group do when we merge our work together?
 Do we do it together? Do we require sign off from someone else?

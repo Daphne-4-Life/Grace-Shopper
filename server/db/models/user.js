@@ -26,6 +26,19 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  isAdmin: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
+  address: {
+    type: Sequelize.TEXT,
+    allowNull: false
+  },
+  imageUrl: {
+    type: Sequelize.TEXT,
+    defaultValue:
+      'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png'
   }
 })
 

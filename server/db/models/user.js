@@ -39,6 +39,14 @@ const User = db.define('user', {
     type: Sequelize.TEXT,
     defaultValue:
       'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png'
+  },
+  firstName: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 })
 

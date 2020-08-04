@@ -2,6 +2,7 @@ const router = require('express').Router()
 const {User} = require('../db/models')
 module.exports = router
 
+//Routes on the root
 router.get('/', async (req, res, next) => {
   try {
     const users = await User.findAll({
@@ -44,6 +45,7 @@ router.post('/', async (req, res, next) => {
   }
 })
 
+//Routes for specific user id
 router.get('/:userId', async (req, res, next) => {
   try {
     const user = await User.findOne({

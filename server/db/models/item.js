@@ -9,12 +9,12 @@ const Item = db.define('item', {
   },
   price: {
     type: Sequelize.INTEGER,
-    defaultValue: 10
+    allowNull: false
   },
   quantity: {
     type: Sequelize.TEXT,
     allowNull: false,
-    defaultValue: 1
+    defaultValue: 0
   },
   imageUrl: {
     type: Sequelize.TEXT,
@@ -27,7 +27,7 @@ const Item = db.define('item', {
     defaultValue: 'T-Shirt'
   },
   size: {
-    type: Sequelize.ARRAY
+    type: Sequelize.ENUM('sm', 'med', 'lg')
   },
   available: {
     type: Sequelize.BOOLEAN,

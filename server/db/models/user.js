@@ -38,7 +38,7 @@ const User = db.define('user', {
     type: Sequelize.TEXT,
     allowNull: false,
     validate: {
-      isEmpty: false
+      notEmpty: true
     }
   },
   imageUrl: {
@@ -50,14 +50,14 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      isEmpty: false
+      notEmpty: true
     }
   },
   lastName: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      isEmpty: false
+      notEmpty: true
     }
   }
 })

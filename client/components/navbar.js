@@ -8,24 +8,33 @@ const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
     <nav>
       {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">
-            <h3>The Shirt Shop</h3>
-          </Link>
+        <div id="navbar">
+          <div className="navbar-left">
+            {/* The navbar will show these links after you log in */}
+            <Link to="/home">
+              <h3>The Shirt Shop</h3>
+            </Link>
 
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
+            <a href="#" onClick={handleClick}>
+              Logout
+            </a>
+          </div>
+          <div className="navbar-right">
+            <Link to="/profile">
+              <h3>Profile</h3>
+            </Link>
+          </div>
         </div>
       ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/home">
-            <h3>The Shirt Shop</h3>
-          </Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+        <div id="navbar">
+          <div className="navbar-left">
+            {/*These will show if you are NOT logged in */}
+            <Link to="/home">
+              <h3>The Shirt Shop</h3>
+            </Link>
+            <Link to="/login">Login</Link>
+            <Link to="/signup">Sign Up</Link>
+          </div>
         </div>
       )}
     </nav>

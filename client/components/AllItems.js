@@ -9,10 +9,6 @@ export class AllItems extends React.Component {
     this.props.getItems()
   }
 
-  handleDelete = id => {
-    this.props.deleteItem(id)
-  }
-
   render() {
     const {items} = this.props
 
@@ -22,13 +18,6 @@ export class AllItems extends React.Component {
       itemList = items.map(item => {
         return (
           <div key={item.id}>
-            <button
-              type="button"
-              className="delete-btn"
-              onClick={() => this.handleDelete(item.id)}
-            >
-              X
-            </button>
             <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
               <Item item={item} />
             </Link>

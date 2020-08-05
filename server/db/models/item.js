@@ -2,11 +2,13 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Item = db.define('item', {
-  // empty string validation needed for name
   name: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   price: {
     type: Sequelize.INTEGER,

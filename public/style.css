@@ -63,6 +63,10 @@ img {
   height: 300px;
 }
 
+/* ------------------- */
+/*  start single item  */
+/* ------------------- */
+
 #singleItemImage {
   width: 400px;
   height: 400px;
@@ -167,3 +171,24 @@ img {
   align-items: center; */
   width: 100%;
 }
+
+/* ------------------- */
+/*  end single item  */
+/* ------------------- */
+
+/* ------------------- */
+/*  start auth form  */
+/* ------------------- */
+
+#welcome-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2c2;
+  /* color: #c0c0c0; */
+  height: 80px;
+  padding: 20px;
+}
+/* ---------------- */
+/*   end auth form  */
+/* -----------------*/

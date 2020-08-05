@@ -9,22 +9,23 @@ const Item = db.define('item', {
   },
   price: {
     type: Sequelize.INTEGER,
-    allowNull: false
-  },
-  quantity: {
-    type: Sequelize.TEXT,
     allowNull: false,
-    defaultValue: 0
+    defaultValue: 20
+  },
+  inventory: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    defaultValue: 5
   },
   imageUrl: {
     type: Sequelize.TEXT,
-    allowNull: false,
+    allowNull: true,
     defaultValue:
       'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
   },
   description: {
-    type: Sequelize.TEXT,
-    defaultValue: 'T-Shirt'
+    type: Sequelize.STRING,
+    defaultValue: 'Our shirts are handmade, comfortable and long lasting.'
   },
   size: {
     type: Sequelize.ENUM('sm', 'med', 'lg')

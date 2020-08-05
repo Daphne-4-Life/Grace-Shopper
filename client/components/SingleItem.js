@@ -82,6 +82,9 @@ export class SingleItem extends React.Component {
                       max="10"
                     />
                   </p>
+                  <p>
+                    <button type="submit">Add to Cart</button>
+                  </p>
                 </div>
               </div>
             ) : (

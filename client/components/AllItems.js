@@ -31,17 +31,17 @@ export class AllItems extends React.Component {
         <h3>All Items</h3>
 
         {/* test items */}
-        <h2>ITEM 1</h2>
+        {/* <h2>ITEM 1</h2>
         <h2>ITEM 2</h2>
         <h2>ITEM 3</h2>
-        <h2>ITEM 4</h2>
+        <h2>ITEM 4</h2> */}
 
         {/* create all items */}
-        {/* {items.length >= 1 ? (
+        {items.length >= 1 ? (
           itemList
         ) : (
-          <h4>There are no campuses registered in the database.</h4>
-        )} */}
+          <h4>There are no items registered in the database.</h4>
+        )}
       </div>
     )
   }

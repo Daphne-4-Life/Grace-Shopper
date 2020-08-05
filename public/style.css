@@ -11,6 +11,48 @@ body {
   width: 100vw;
 }
 
+/* ------------ */
+/* start navbar */
+/* ------------ */
+/* nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  color: #c0c0c0;
+  height: 80px;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  padding: 5px 15px;
+  font-size: 2em;
+  color: red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  background: grey;
+  color: black;
+}
+
+#home-link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+} 
+*/
+
 nav a {
   text-decoration: none;
   color: white;
@@ -34,6 +76,13 @@ nav {
   padding: 10px;
 }
 
+/* ---------- */
+/* end navbar */
+/* ---------- */
+
+/* ------------------ */
+/*   start auth form  */
+/* ------------------ */
 form div {
   margin: 1em;
   display: inline-block;
@@ -43,6 +92,7 @@ form div {
   display: flex;
   flex-direction: row;
   flex: 1;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -58,10 +108,27 @@ form div {
   background-color: white;
 }
 
+#welcome-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2c2c2;
+  /* color: #c0c0c0; */
+  height: 80px;
+  padding: 20px;
+}
+/* ---------------- */
+/*   end auth form  */
+/* -----------------*/
+
 img {
   width: 300px;
   height: 300px;
 }
+
+/* ------------------- */
+/*  start single item  */
+/* ------------------- */
 
 #singleItem {
   background-color: white;
@@ -83,3 +150,7 @@ img {
   align-items: center;
   width: 100%;
 }
+
+/* ------------------- */
+/*  end single item  */
+/* ------------------- */

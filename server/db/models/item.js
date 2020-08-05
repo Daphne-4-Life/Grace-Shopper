@@ -29,6 +29,9 @@ const Item = db.define('item', {
   size: {
     type: Sequelize.ENUM('sm', 'med', 'lg')
   },
+  color: {
+    type: Sequelize.ENUM('black', 'white', 'red', 'orange', 'blue')
+  },
   available: {
     type: Sequelize.BOOLEAN,
     defaultValue: true

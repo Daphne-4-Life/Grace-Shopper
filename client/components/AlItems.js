@@ -40,7 +40,7 @@ export class AllItems extends React.Component {
         {/* {items.length >= 1 ? (
           itemList
         ) : (
-          <h4>There are no campuses registered in the database.</h4>
+          <h4>There are no items registered in the database.</h4>
         )} */}
       </div>
     )

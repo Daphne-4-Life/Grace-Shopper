@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
         // explicitly select only the id and email fields - even though
         // users' passwords are encrypted, it won't help if we just
         // send everything to anyone who asks!
-        attributes: ['id', 'email']
+        attributes: ['id', 'email'],
       },
       {include: Order}
     )
@@ -31,7 +31,7 @@ router.post('/', async (req, res, next) => {
       address,
       imageUrl,
       firstName,
-      lastName
+      lastName,
     } = req.body
     const user = await User.create({
       email,
@@ -41,9 +41,9 @@ router.post('/', async (req, res, next) => {
       address,
       imageUrl,
       firstName,
-      lastName
+      lastName,
     })
-    res.json(user)
+    res.json(user) //Do we need to send all these fields?
   } catch (err) {
     next(err)
   }
@@ -62,8 +62,8 @@ router.get('/:userId', async (req, res, next) => {
           'address',
           'imageUrl',
           'firstName',
-          'lastName'
-        ]
+          'lastName',
+        ],
       }
     )
     res.json(user)
@@ -80,9 +80,9 @@ router.get('/:userId/cart', async (req, res, next) => {
         include: {
           model: Order,
           where: {
-            status: 'pending'
-          }
-        }
+            status: 'pending',
+          },
+        },
       },
       {
         where: {id: req.params.userId},
@@ -92,8 +92,8 @@ router.get('/:userId/cart', async (req, res, next) => {
           'address',
           'imageUrl',
           'firstName',
-          'lastName'
-        ]
+          'lastName',
+        ],
       }
     )
     res.json(user)
@@ -123,7 +123,7 @@ router.put('/:userId', async (req, res, next) => {
       {...updatedFields},
       {where: {id: req.params.userId}}
     )
-    res.json(user)
+    res.json(user) //Do we want to send the entire user object?
   } catch (error) {
     next(error)
   }

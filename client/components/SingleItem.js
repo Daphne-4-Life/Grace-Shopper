@@ -6,7 +6,7 @@ export class SingleItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: true
+      loading: true, //Do we need this?
     }
   }
   async componentDidMount() {
@@ -15,7 +15,7 @@ export class SingleItem extends React.Component {
     )
     if (singleItemResponse === true) {
       this.setState({
-        loading: false
+        loading: false,
       })
     }
   }
@@ -48,15 +48,15 @@ export class SingleItem extends React.Component {
     )
   }
 }
-const mapState = state => {
+const mapState = (state) => {
   return {singleItem: state.singleItem}
 }
 
-const mapDispatch = dispatch => {
+const mapDispatch = (dispatch) => {
   return {
-    getSingleItem: id => {
+    getSingleItem: (id) => {
       return dispatch(fetchSingleItem(id))
-    }
+    },
   }
 }
 

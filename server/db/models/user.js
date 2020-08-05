@@ -5,8 +5,9 @@ const db = require('../db')
 const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
+    //Additional validation for email?
     unique: true,
-    allowNull: false
+    allowNull: false,
   },
   password: {
     type: Sequelize.STRING,
@@ -14,7 +15,7 @@ const User = db.define('user', {
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
       return () => this.getDataValue('password')
-    }
+    },
   },
   salt: {
     type: Sequelize.STRING,
@@ -22,32 +23,34 @@ const User = db.define('user', {
     // This is a hack to get around Sequelize's lack of a "private" option.
     get() {
       return () => this.getDataValue('salt')
-    }
+    },
   },
   googleId: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
-    defaultValue: false
+    defaultValue: false,
   },
   address: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
   },
   imageUrl: {
     type: Sequelize.TEXT,
     defaultValue:
-      'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png'
+      'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png',
   },
   firstName: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    //Can this be an empty string?
   },
   lastName: {
     type: Sequelize.STRING,
-    allowNull: false
-  }
+    allowNull: false,
+    //Can this be an empty string?
+  },
 })
 
 module.exports = User
@@ -55,18 +58,18 @@ module.exports = User
 /**
  * instanceMethods
  */
-User.prototype.correctPassword = function(candidatePwd) {
+User.prototype.correctPassword = function (candidatePwd) {
   return User.encryptPassword(candidatePwd, this.salt()) === this.password()
 }
 
 /**
  * classMethods
  */
-User.generateSalt = function() {
+User.generateSalt = function () {
   return crypto.randomBytes(16).toString('base64')
 }
 
-User.encryptPassword = function(plainText, salt) {
+User.encryptPassword = function (plainText, salt) {
   return crypto
     .createHash('RSA-SHA256')
     .update(plainText)
@@ -77,7 +80,7 @@ User.encryptPassword = function(plainText, salt) {
 /**
  * hooks
  */
-const setSaltAndPassword = user => {
+const setSaltAndPassword = (user) => {
   if (user.changed('password')) {
     user.salt = User.generateSalt()
     user.password = User.encryptPassword(user.password(), user.salt())
@@ -86,6 +89,6 @@ const setSaltAndPassword = user => {
 
 User.beforeCreate(setSaltAndPassword)
 User.beforeUpdate(setSaltAndPassword)
-User.beforeBulkCreate(users => {
+User.beforeBulkCreate((users) => {
   users.forEach(setSaltAndPassword)
 })

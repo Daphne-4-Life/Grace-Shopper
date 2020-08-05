@@ -6,22 +6,25 @@ const Order = db.define(
   {
     totalPrice: {
       type: Sequelize.FLOAT,
+      //Your item price is an integer, why is this a float?
       allowNull: true,
-      defaultValue: 0.0
+      defaultValue: 0.0,
     },
     status: {
       type: Sequelize.STRING,
       validate: {
-        isIn: [['pending', 'complete']]
-      }
-    }
+        isIn: [['pending', 'complete']],
+        // Like enum?
+      },
+    },
   },
   {
     hooks: {
       beforeValidate(order) {
+        // vs default value?
         order.status = 'pending'
-      }
-    }
+      },
+    },
   }
 )
 

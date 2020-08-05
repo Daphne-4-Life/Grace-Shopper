@@ -5,28 +5,28 @@ const ADDED_ITEMS = 'ADDED_ITEMS'
 const DELETED_ITEM = 'DELETED_ITEM'
 const UPDATED_ITEM = 'UPDATED_ITEM'
 
-export const setItems = items => ({
+export const setItems = (items) => ({
   type: SET_ITEMS,
-  items
+  items,
 })
 
-export const addItem = item => ({
+export const addItem = (item) => ({
   type: ADDED_ITEMS,
-  item
+  item,
 })
 
-export const updatedItem = item => ({
+export const updatedItem = (item) => ({
   type: UPDATED_ITEM,
-  item
+  item,
 })
 
-export const deletedItem = id => ({
+export const deletedItem = (id) => ({
   type: DELETED_ITEM,
-  id
+  id,
 })
 
 export const fetchItems = () => {
-  return async dispatch => {
+  return async (dispatch) => {
     try {
       const {data} = await axios.get('/api/items')
       dispatch(setItems(data))
@@ -36,8 +36,8 @@ export const fetchItems = () => {
   }
 }
 
-export const addedItem = addItemForm => {
-  return async dispatch => {
+export const addedItem = (addItemForm) => {
+  return async (dispatch) => {
     try {
       const {data} = await axios.post('/api/items', addItemForm)
       dispatch(addItem(data))
@@ -47,8 +47,8 @@ export const addedItem = addItemForm => {
   }
 }
 
-export const updateItem = item => {
-  return async dispatch => {
+export const updateItem = (item) => {
+  return async (dispatch) => {
     try {
       const {data} = await axios.put(`/api/items/${item.id}`, item)
       dispatch(updatedItem(data))
@@ -58,8 +58,8 @@ export const updateItem = item => {
   }
 }
 
-export const deleteItem = id => {
-  return async dispatch => {
+export const deleteItem = (id) => {
+  return async (dispatch) => {
     try {
       await axios.delete(`/api/items/${id}`)
       dispatch(deletedItem(id))
@@ -84,7 +84,7 @@ export default function itemsReducer(state = initialState, action) {
       return itemToUpdate
     }
     case DELETED_ITEM: {
-      const itemToDelete = [...state.filter(item => item.id !== action.id)]
+      const itemToDelete = [...state.filter((item) => item.id !== action.id)] //Why do we need to spread the state here? Filter returns a new array
       return itemToDelete
     }
     default:

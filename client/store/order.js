@@ -2,65 +2,57 @@ import axios from 'axios'
 
 //action type
 
-const GET_ALL_ORDER = 'GET_ORDER'
-const GET_ORDER_PENDING = 'GET_ORDER_PENDING'
-const CREATE_ORDER = 'CREATE_ORDER'
+const GET_ALL_ORDERS = 'GET_ALL_ORDERS'
+const GET_PENDING_ORDER = 'GET_PENDING_ORDER'
+const COMPLETE_ORDER = 'COMPLETE_ORDER'
 const UPDATE_ORDER = 'UPDATE_ORDER'
-const REMOVE_ORDER = 'REMOVE_ORDER'
 
 // action creator
 
-export const getAllOrder = order => ({
-  type: GET_ALL_ORDER,
-  order
+export const getAllOrdersByUser = orders => ({
+  type: GET_ALL_ORDERS,
+  orders
 })
 
-export const getOrderPending = orderPending => ({
-  type: GET_ORDER_PENDING,
-  orderPending
+export const getPendingOrder = pendingOrder => ({
+  type: GET_PENDING_ORDER,
+  pendingOrder
 })
 
-export const createOrder = orderCreate => ({
-  type: CREATE_ORDER,
-  orderCreate
+export const completeOrder = (createdOrder, completedOrder) => ({
+  type: COMPLETE_ORDER,
+  createdOrder,
+  completedOrder
 })
 
-export const updateOrder = orderUpdate => ({
+export const updateOrder = updatedOrder => ({
   type: UPDATE_ORDER,
-  orderUpdate
-})
-
-export const removeOrder = orderId => ({
-  type: REMOVE_ORDER,
-  orderId
+  updatedOrder
 })
 
 //thunk
 //get order thunk for the pending orders (to represent cart)
 
-export const GetOrderByUserThunk = () => async dispatch => {
+export const GetOrderByUserIdThunk = userId => async dispatch => {
   try {
-    const {data} = await axios.get(`/api/orders`)
-    dispatch(getAllOrder(data))
+    const {data} = await axios.get(`/api/orders/${userId}`)
+    dispatch(getAllOrdersByUser(data))
   } catch (error) {
     console.log(error)
   }
 }
 
-export const GetOrderPendingThunk = () => async dispatch => {
+export const GetOrderPendingThunk = userId => async dispatch => {
   try {
-    const {data} = await axios.get('/api/orders', {
-      params: {
-        status: 'pending'
-      }
-    })
-    dispatch(getOrderPending(data))
+    const {data} = await axios.get(`/api/user/:${userId}/cart`)
+    dispatch(getPendingOrder(data))
   } catch (error) {
     console.log(error)
   }
 }
 
-export const EditOrderThunk = (order, orderUpdater) => async dispatch => {
+//interaction with current order (cart)
+export const EditOrderItemsThunk = (order, orderUpdater) => async dispatch => {
   try {
     const {data} = await axios.put(`/api/orders/${order}`, orderUpdater)
     dispatch(updateOrder(data))
@@ -69,39 +61,49 @@ export const EditOrderThunk = (order, orderUpdater) => async dispatch => {
   }
 }
 
-export const CreateOrderThunk = order => async dispatch => {
+export const EditOrderItemQtyThunk = (userId, qty) => async dispatch => {
   try {
-    const {data} = await axios.post('/api/orders', order)
-    dispatch(createOrder(data))
+    const {data} = await axios.put(`/api/orders/${userId}`, qty)
+    dispatch(updateOrder(data))
   } catch (error) {
     console.log(error)
   }
 }
 
-export const DeleteOrderThunk = order => async dispatch => {
+//setting which is your cart order
+export const CompleteOrderThunk = userId => async dispatch => {
   try {
-    await axios.delete(`/api/campuses/${order}`)
-    dispatch(removeOrder(order))
+    const newOrderRes = await axios.post('/api/orders')
+    const newOrder = newOrderRes.data
+    const completedOrderRes = await axios.put(`api/orders/${userId}/cart`)
+    const completedOrder = completedOrderRes.data
+    dispatch(completeOrder(newOrder, completedOrder))
   } catch (error) {
     console.log(error)
   }
 }
+
 //initial state
-const initialState = []
+const initialState = {
+  previousOrders: [],
+  currentOrder: {}
+}
 
 //reducer
 export default function orderReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_ALL_ORDER:
-      return action.order
-    case GET_ORDER_PENDING:
-      return action.orderPending
-    case CREATE_ORDER:
-      return [...state, action.orderCreate]
+    case GET_ALL_ORDERS:
+      return {...state, previousOrders: action.orders}
+    case GET_PENDING_ORDER:
+      return {...state, currentOrder: action.pendingOrder}
+    case COMPLETE_ORDER:
+      return {
+        ...state,
+        currentOrder: action.createdOrder,
+        previousOrders: [...action.previousOrders, action.completedOrder]
+      }
     case UPDATE_ORDER:
-      return action.orderUpdate
-    case REMOVE_ORDER:
-      return state.filter(order => order.id !== action.orderId)
+      return {...state, currentOrder: action.updatedOrder}
     default:
       return state
   }

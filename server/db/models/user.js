@@ -6,7 +6,8 @@ const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false
+    allowNull: false,
+    isEmail: true
   },
   password: {
     type: Sequelize.STRING,
@@ -32,7 +33,7 @@ const User = db.define('user', {
     defaultValue: false
   },
   address: {
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING,
     allowNull: false
   },
   imageUrl: {
@@ -40,6 +41,7 @@ const User = db.define('user', {
     defaultValue:
       'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png'
   },
+  //validation for empty strings needed
   firstName: {
     type: Sequelize.STRING,
     allowNull: false

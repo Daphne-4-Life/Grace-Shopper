@@ -5,10 +5,11 @@ const Order = db.define(
   'order',
   {
     totalPrice: {
-      type: Sequelize.FLOAT,
+      type: Sequelize.INTEGER,
       allowNull: true,
-      defaultValue: 0.0
+      defaultValue: 0
     },
+    //consider ENUM
     status: {
       type: Sequelize.STRING,
       validate: {
@@ -17,6 +18,8 @@ const Order = db.define(
     }
   },
   {
+    // can set default value instead
+    // can add validations for negative values on inventory and price
     hooks: {
       beforeValidate(order) {
         order.status = 'pending'

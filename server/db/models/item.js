@@ -2,6 +2,7 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Item = db.define('item', {
+  // empty string validation needed for name
   name: {
     type: Sequelize.STRING,
     unique: true,
@@ -12,7 +13,7 @@ const Item = db.define('item', {
     allowNull: false
   },
   quantity: {
-    type: Sequelize.TEXT,
+    type: Sequelize.INTEGER,
     allowNull: false,
     defaultValue: 0
   },
@@ -23,15 +24,11 @@ const Item = db.define('item', {
       'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
   },
   description: {
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING,
     defaultValue: 'T-Shirt'
   },
   size: {
     type: Sequelize.ENUM('sm', 'med', 'lg')
-  },
-  available: {
-    type: Sequelize.BOOLEAN,
-    defaultValue: true
   }
 })
 

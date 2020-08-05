@@ -1,10 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {me} from '../store'
 //Need order reducer to pull previous orders based on current user's userId and display in previous orders div
 
 const Profile = props => {
-  const {firstName, lastName, email, address, imageUrl} = props
+  const {user, firstName, lastName, email, address, imageUrl} = props
 
   //NEED TO MAKE A PREVIOUS ORDERS COMPONENT TO PUTINTO PREVIOUS ORDERS
   return (
@@ -15,7 +14,7 @@ const Profile = props => {
       </div>
       <div className="profile-body">
         <h3>
-          {firstName} {lastName}
+          {firstName.toUpperCase()} {lastName.toUpperCase()}
         </h3>
         <h4>Email</h4>
         <p>{email}</p>
@@ -32,6 +31,7 @@ const Profile = props => {
 //NEED TO ALSO PULL ALL THE ORDERS TO PROPS ONCE WE KNOW WHAT THE ORDER REDUCER LOOKS LIKE
 const mapState = state => {
   return {
+    user: state.user,
     email: state.user.email,
     address: state.user.address,
     imageUrl: state.user.imageUrl,

@@ -6,7 +6,9 @@ export class SingleItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: true
+      loading: true,
+      colors: ['black', 'white', 'red', 'orange', 'blue'],
+      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']
     }
   }
   async componentDidMount() {
@@ -30,12 +32,58 @@ export class SingleItem extends React.Component {
           <div>
             {singleItem.id ? (
               <div className="singleItemContainer">
+                <div id="singleItemImageContainer">
+                  <img id="singleItemImage" src={singleItem.imageUrl} />
+                </div>
                 <div id="singleItem">
-                  <h2>{singleItem.name}</h2>
-                  <img src={singleItem.imageUrl} />
+                  <h2>Shirt Shop {singleItem.name}</h2>
+                  <h3 id="singleItemDescription">{singleItem.description}</h3>
+                  <h4>${singleItem.price}.00</h4>
                   <p>
-                    <strong>Item Information: </strong>
-                    {singleItem.description}
+                    <strong>Size: </strong>
+                    <ul id="singleItemList">
+                      {this.state.sizes.map(element => {
+                        return (
+                          <li id="sizeListItem" key={element}>
+                            <button type="submit" className="singleItemButton">
+                              {element}
+                            </button>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </p>
+                  <p>
+                    <strong>Color: </strong>
+                    <ul id="singleItemList">
+                      {this.state.colors.map(element => {
+                        return (
+                          <li
+                            id="colorListItem"
+                            className={element}
+                            key={element}
+                          >
+                            <button type="submit" className="singleItemButton">
+                              {element}
+                            </button>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </p>
+                  <p id="singleItemQuantity">
+                    <strong>Quantity: </strong>
+                    <input
+                      className="singleItemQuantity"
+                      type="number"
+                      id="quantity"
+                      name="quantity"
+                      min="1"
+                      max="10"
+                    />
+                  </p>
+                  <p>
+                    <button type="submit">Add to Cart</button>
                   </p>
                 </div>
               </div>

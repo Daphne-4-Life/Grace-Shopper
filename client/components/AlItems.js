@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {fetchItems, deleteItem} from '../redux/items'
+import {fetchItems} from '../redux/items'
 import Item from './Item'
 
 export class AllItems extends React.Component {
@@ -40,7 +40,7 @@ export class AllItems extends React.Component {
         {/* {items.length >= 1 ? (
           itemList
         ) : (
-          <h4>There are no campuses registered in the database.</h4>
+          <h4>There are no items registered in the database.</h4>
         )} */}
       </div>
     )
@@ -52,8 +52,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getItems: () => dispatch(fetchItems()),
-  deleteItem: id => dispatch(deleteItem(id))
+  getItems: () => dispatch(fetchItems())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllItems)

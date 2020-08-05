@@ -7,7 +7,13 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
+
     isEmail: true
+
+    validate: {
+      isEmail: true
+    }
+
   },
   password: {
     type: Sequelize.STRING,
@@ -33,8 +39,16 @@ const User = db.define('user', {
     defaultValue: false
   },
   address: {
+
     type: Sequelize.STRING,
     allowNull: false
+
+    type: Sequelize.TEXT,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+
   },
   imageUrl: {
     type: Sequelize.TEXT,
@@ -44,11 +58,17 @@ const User = db.define('user', {
   //validation for empty strings needed
   firstName: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   lastName: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   }
 })
 

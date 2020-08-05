@@ -14,15 +14,12 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             <Link to="/home">
               <h3>The Shirt Shop</h3>
             </Link>
-
-            <a href="#" onClick={handleClick}>
-              Logout
-            </a>
-          </div>
-          <div className="navbar-right">
             <Link to="/profile">
               <h3>Profile</h3>
             </Link>
+            <a href="#" onClick={handleClick}>
+              Logout
+            </a>
           </div>
         </div>
       ) : (

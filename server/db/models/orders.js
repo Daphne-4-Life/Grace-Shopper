@@ -1,15 +1,28 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const Orders = db.define('orders', {
-  userId: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+const Order = db.define(
+  'order',
+  {
+    totalPrice: {
+      type: Sequelize.FLOAT,
+      allowNull: true,
+      defaultValue: 0.0
+    },
+    status: {
+      type: Sequelize.STRING,
+      validate: {
+        isIn: [['pending', 'complete']]
+      }
+    }
   },
-  itemId: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+  {
+    hooks: {
+      beforeValidate(order) {
+        order.status = 'pending'
+      }
+    }
   }
-})
+)
 
-module.exports = Orders
+module.exports = Order

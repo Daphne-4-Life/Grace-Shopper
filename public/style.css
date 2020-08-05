@@ -1,9 +1,19 @@
-body {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
 }
 
-a {
+body {
+  background: linear-gradient(#ffffff, #c0c0c0);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
+nav a {
   text-decoration: none;
+  color: white;
 }
 
 label {
@@ -15,7 +25,34 @@ nav a {
   margin: 1em;
 }
 
+nav {
+  align-items: center;
+  background-color: #333333;
+  color: #c0c0c0;
+  display: flex;
+  height: 80px;
+  padding: 10px;
+}
+
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.auth-form-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.auth-form {
+  box-shadow: #333333 2px 2px 2px 2px;
+  margin: 2%;
+  text-align: center;
+  border-radius: 25px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background-color: white;
 }

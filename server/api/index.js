@@ -1,15 +1,17 @@
-const router = require('express').Router()
-module.exports = router
+const User = require('./user')
 
-router.use('/users', require('./users'))
-router.use('/orders', require('./orders'))
+const Order = require('./order')
+const Item = require('./item')
 
-// router.use('/orders', require('./orders'))
+// Adding Associations
+Order.belongsTo(User)
+User.hasMany(Order)
 
-router.use('/items', require('./items'))
+//Important: through table name is Order_Content, it shows all the items in that particular order.
+Order.belongsToMany(Item, {through: 'Order_Content'})
 
-router.use((req, res, next) => {
-  const error = new Error('Not Found')
-  error.status = 404
-  next(error)
-})
+module.exports = {
+  User,
+  Item,
+  Order
+}

@@ -8,10 +8,6 @@ Order.belongsTo(User)
 User.hasMany(Order)
 
 //Important: through table name is Order_Content, it shows all the items in that particular order.
-
-Order.belongsToMany(Item, {through: 'Order_Content'})
-Order.setChild(OrderContent)
-
 Order.belongsToMany(Item, {through: OrderContent})
 
 

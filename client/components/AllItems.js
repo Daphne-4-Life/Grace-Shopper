@@ -52,8 +52,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getItems: () => dispatch(fetchItems()),
-  deleteItem: id => dispatch(deleteItem(id))
+  getItems: () => dispatch(fetchItems())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllItems)

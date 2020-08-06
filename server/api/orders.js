@@ -71,8 +71,8 @@ router.put('/:userId/cart/complete', async (req, res, next) => {
   }
 })
 
-//EDITS THE CART THROUGH ORDER_CONTENT AS WELL AS ORDER TOTALPRICE. ONLY USE THIS ROUTE IF AN ORDER_CONTENT EXISTS, WHICH WOULD BE DONE UNDER ITEMS ROUTE
-router.put('/:userId/cart', async (req, res, next) => {
+//EDITS THE CART THROUGH ORDER_CONTENT BASED ON ITEM CHOSEN TO UPDATE AND ORDERID
+router.put('/:userId/cart/:itemId', async (req, res, next) => {
   try {
     const {quantity, price, color, size} = req.body
     const order = await Order.findOne({
@@ -87,7 +87,8 @@ router.put('/:userId/cart', async (req, res, next) => {
     const orderId = order.id
     const orderContent = OrderContent.findOne({
       where: {
-        orderId
+        orderId,
+        itemId: req.params.itemId
       }
     })
     const updatedOrderContent = await orderContent.update({

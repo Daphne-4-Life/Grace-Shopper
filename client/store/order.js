@@ -45,9 +45,16 @@ export const GetOrderPendingThunk = userId => async dispatch => {
 }
 
 //UPDATING CURRENT CART
-export const EditCartThunk = (userId, orderUpdate) => async dispatch => {
+export const EditCartThunk = (
+  userId,
+  itemId,
+  orderUpdate
+) => async dispatch => {
   try {
-    const {data} = await axios.put(`/api/orders/:${userId}/cart`, orderUpdate)
+    const {data} = await axios.put(
+      `/api/orders/:${userId}/cart/:${itemId}`,
+      orderUpdate
+    )
     dispatch(updateOrder(data))
   } catch (error) {
     console.log(error)

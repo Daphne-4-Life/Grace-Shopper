@@ -43,7 +43,14 @@ router.post('/', async (req, res, next) => {
       firstName,
       lastName
     })
-    res.json(user)
+    const respondUser = {
+      email: user.email,
+      address: user.address,
+      imageUrl: user.imageUrl,
+      firstName: user.firstName,
+      lastName: user.lastName
+    }
+    res.json(respondUser)
   } catch (err) {
     next(err)
   }
@@ -123,7 +130,14 @@ router.put('/:userId', async (req, res, next) => {
       {...updatedFields},
       {where: {id: req.params.userId}}
     )
-    res.json(user)
+    const respondUser = {
+      email: user.email,
+      address: user.address,
+      imageUrl: user.imageUrl,
+      firstName: user.firstName,
+      lastName: user.lastName
+    }
+    res.json(respondUser)
   } catch (error) {
     next(error)
   }

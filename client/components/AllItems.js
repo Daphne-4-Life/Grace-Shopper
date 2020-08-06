@@ -17,6 +17,7 @@ export class AllItems extends React.Component {
     } else if (this.props.match.path === '/longSleeveItems') {
       this.props.getLongSleeveItems()
     }
+    console.log(this.props)
   }
 
   render() {

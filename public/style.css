@@ -189,6 +189,33 @@ img {
   height: 80px;
   padding: 20px;
 }
+
 /* ---------------- */
 /*   end auth form  */
+/* -----------------*/
+
+/* ---------------- */
+/*   start home page  */
+/* -----------------*/
+
+.mainComponent {
+  box-shadow: #333333 2px 2px 2px 2px;
+  margin: 2%;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.mainComponent img {
+  border-radius: 20px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* ---------------- */
+/*   end home page  */
 /* -----------------*/

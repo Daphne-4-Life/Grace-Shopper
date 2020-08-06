@@ -6,47 +6,36 @@ import {fetchItems} from '../store/item'
 
 export class AllItems extends React.Component {
   componentDidMount() {
-    console.log('IN COMPONENT DID MOIUNT')
-    console.log(this.props.getItems())
     this.props.getItems()
   }
 
   render() {
-    // const {items} = this.props
+    const {items} = this.props || []
 
-    console.log('this props >>', this.props)
+    let itemList
 
-    // let itemList
-
-    // if (items.length >= 1) {
-    //   itemList = items.map((item) => {
-    //     return (
-    //       <div key={item.id}>
-    //         <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
-    //           {/* <Item item={item} /> */}
-    //           <div>{item.name}</div>
-    //         </Link>
-    //       </div>
-    //     )
-    //   })
-    // }
+    if (items.length >= 1) {
+      itemList = items.map(item => {
+        return (
+          <div key={item.id}>
+            <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
+              {/* <Item item={item} /> */}
+              <div>{item.name}</div>
+            </Link>
+          </div>
+        )
+      })
+    }
 
     return (
       <div>
         <h3>All Items</h3>
-
-        {/* test items */}
-        <h2>ITEM 1</h2>
-        <h2>ITEM 2</h2>
-        <h2>ITEM 3</h2>
-        <h2>ITEM 4</h2>
-
         {/* create all items */}
-        {/* {items.length >= 1 ? (
+        {items.length >= 1 ? (
           itemList
         ) : (
           <h4>There are no items registered in the database.</h4>
-        )} */}
+        )}
       </div>
     )
   }

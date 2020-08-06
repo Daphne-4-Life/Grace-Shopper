@@ -29,7 +29,7 @@ export const UserHome = props => {
             </a>
           </div>
           <div className="mainComponent">
-            <a href="/shortSleeveItems">
+            <a href="/longSleeveItems">
               <img src="https://www.uberprints.com/assets/images/products/jpg/800x800/GIG240_1_WHT.jpg" />
               <h4>Long Sleeve Shirts</h4>
             </a>

@@ -27,10 +27,14 @@ const Item = db.define('item', {
     defaultValue: 'T-Shirt'
   },
   size: {
-    type: Sequelize.ENUM('sm', 'med', 'lg')
+    type: Sequelize.ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL')
   },
   color: {
     type: Sequelize.ENUM('black', 'white', 'red', 'orange', 'blue')
+  },
+  category: {
+    type: Sequelize.ENUM('long sleeve', 'short sleeve'),
+    allowNull: false
   },
   available: {
     type: Sequelize.BOOLEAN,

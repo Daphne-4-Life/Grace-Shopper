@@ -18,6 +18,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:userId', async (req, res, next) => {
   try {
     const userOrders = await Order.findAll({
+      include: {model: OrderContent},
       where: {
         userId: req.params.userId
       }
@@ -31,7 +32,8 @@ router.get('/:userId', async (req, res, next) => {
 //GET CURRENT PENDING ORDER
 router.get('/:userId/cart', async (req, res, next) => {
   try {
-    const userOrders = await Order.findAll({
+    const userOrders = await Order.findOne({
+      include: {model: OrderContent},
       where: {
         userId: req.params.userId,
         status: 'pending'

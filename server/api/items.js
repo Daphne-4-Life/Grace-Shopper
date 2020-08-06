@@ -11,6 +11,32 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+router.get('/longSleeve', async (req, res, next) => {
+  try {
+    const items = await Item.findAll({
+      where: {
+        category: 'long sleeve'
+      }
+    })
+    res.json(items)
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.get('/shortSleeve', async (req, res, next) => {
+  try {
+    const items = await Item.findAll({
+      where: {
+        category: 'short sleeve'
+      }
+    })
+    res.json(items)
+  } catch (error) {
+    next(error)
+  }
+})
+
 // GET item by id
 router.get('/:id', async (req, res, next) => {
   try {

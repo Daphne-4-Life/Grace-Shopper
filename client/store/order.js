@@ -1,38 +1,29 @@
 import axios from 'axios'
-
 //action type
-
 const GET_ALL_ORDERS = 'GET_ALL_ORDERS'
 const GET_PENDING_ORDER = 'GET_PENDING_ORDER'
 const COMPLETE_ORDER = 'COMPLETE_ORDER'
 const UPDATE_ORDER = 'UPDATE_ORDER'
-
 // action creator
-
 export const getAllOrdersByUser = orders => ({
   type: GET_ALL_ORDERS,
   orders
 })
-
 export const getPendingOrder = pendingOrder => ({
   type: GET_PENDING_ORDER,
   pendingOrder
 })
-
 export const completeOrder = (createdOrder, completedOrder) => ({
   type: COMPLETE_ORDER,
   createdOrder,
   completedOrder
 })
-
 export const updateOrder = updatedOrder => ({
   type: UPDATE_ORDER,
   updatedOrder
 })
-
 //thunk
 //get order thunk for the pending orders (to represent cart)
-
 export const GetOrderByUserIdThunk = userId => async dispatch => {
   try {
     const {data} = await axios.get(`/api/orders/${userId}`)
@@ -41,7 +32,6 @@ export const GetOrderByUserIdThunk = userId => async dispatch => {
     console.log(error)
   }
 }
-
 export const GetOrderPendingThunk = userId => async dispatch => {
   try {
     const {data} = await axios.get(`/api/user/:${userId}/cart`)
@@ -50,7 +40,6 @@ export const GetOrderPendingThunk = userId => async dispatch => {
     console.log(error)
   }
 }
-
 //interaction with current order (cart)
 export const EditOrderItemsThunk = (order, orderUpdater) => async dispatch => {
   try {
@@ -60,7 +49,6 @@ export const EditOrderItemsThunk = (order, orderUpdater) => async dispatch => {
     console.log(error)
   }
 }
-
 export const EditOrderItemQtyThunk = (userId, qty) => async dispatch => {
   try {
     const {data} = await axios.put(`/api/orders/${userId}`, qty)
@@ -69,7 +57,6 @@ export const EditOrderItemQtyThunk = (userId, qty) => async dispatch => {
     console.log(error)
   }
 }
-
 //setting which is your cart order
 export const CompleteOrderThunk = userId => async dispatch => {
   try {
@@ -82,13 +69,11 @@ export const CompleteOrderThunk = userId => async dispatch => {
     console.log(error)
   }
 }
-
 //initial state
 const initialState = {
   previousOrders: [],
   currentOrder: {}
 }
-
 //reducer
 export default function orderReducer(state = initialState, action) {
   switch (action.type) {

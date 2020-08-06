@@ -2,7 +2,6 @@ const router = require('express').Router()
 const {Order} = require('../db/models')
 const {OrderContent} = require('../db/models')
 module.exports = router
-
 router.get('/', async (req, res, next) => {
   try {
     const orders = await Order.findAll(req.body)
@@ -11,7 +10,6 @@ router.get('/', async (req, res, next) => {
     next(error)
   }
 })
-
 router.get('/:userId', async (req, res, next) => {
   try {
     const userOrders = await Order.findAll({
@@ -24,7 +22,6 @@ router.get('/:userId', async (req, res, next) => {
     next(error)
   }
 })
-
 router.get('/:userId/cart', async (req, res, next) => {
   try {
     const userOrders = await Order.findAll({
@@ -38,7 +35,6 @@ router.get('/:userId/cart', async (req, res, next) => {
     next(error)
   }
 })
-
 router.post('/', async (req, res, next) => {
   try {
     const addOrder = await Order.create(req.body)
@@ -47,7 +43,6 @@ router.post('/', async (req, res, next) => {
     next(error)
   }
 })
-
 router.put('/:userId/cart', async (req, res, next) => {
   try {
     const order = await Order.findOne({

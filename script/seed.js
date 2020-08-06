@@ -29,28 +29,32 @@ async function seed() {
     Item.create({
       name: 'Music Shirt',
       price: 10,
-      size: 'med',
+      size: 'M',
+      category: 'short sleeve',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
       price: 10,
-      size: 'sm',
+      size: 'S',
+      category: 'short sleeve',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
       price: 10,
-      size: 'med',
+      category: 'long sleeve',
+      size: 'M',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
       price: 10,
-      size: 'lg',
+      category: 'long sleeve',
+      size: 'L',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     })

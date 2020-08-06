@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {fetchItems} from '../redux/items'
-import Item from './Item'
+import {fetchItems} from '../store/item'
+// import Item from './Item'
 
 export class AllItems extends React.Component {
   componentDidMount() {
@@ -10,7 +10,7 @@ export class AllItems extends React.Component {
   }
 
   render() {
-    const {items} = this.props
+    const {items} = this.props || []
 
     let itemList
 
@@ -19,7 +19,8 @@ export class AllItems extends React.Component {
         return (
           <div key={item.id}>
             <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
-              <Item item={item} />
+              {/* <Item item={item} /> */}
+              <div>{item.name}</div>
             </Link>
           </div>
         )
@@ -29,19 +30,12 @@ export class AllItems extends React.Component {
     return (
       <div>
         <h3>All Items</h3>
-
-        {/* test items */}
-        <h2>ITEM 1</h2>
-        <h2>ITEM 2</h2>
-        <h2>ITEM 3</h2>
-        <h2>ITEM 4</h2>
-
         {/* create all items */}
-        {/* {items.length >= 1 ? (
+        {items.length >= 1 ? (
           itemList
         ) : (
           <h4>There are no items registered in the database.</h4>
-        )} */}
+        )}
       </div>
     )
   }

@@ -17,10 +17,12 @@ export class AllItems extends React.Component {
     if (items.length >= 1) {
       itemList = items.map(item => {
         return (
-          <div key={item.id}>
-            <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
+          <div id="item-link" key={item.id}>
+            <Link
+              to={`/items/${item.id}`}
+              style={{textDecoration: 'none', color: '#FFF'}}
+            >
               <Item item={item} />
-              {/* <div>{item.name}</div> */}
             </Link>
           </div>
         )

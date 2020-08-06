@@ -1,30 +1,35 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {fetchItems} from '../redux/items'
-import Item from './Item'
+import {fetchItems} from '../store/item'
+// import Item from './Item'
 
 export class AllItems extends React.Component {
   componentDidMount() {
+    console.log('IN COMPONENT DID MOIUNT')
+    console.log(this.props.getItems())
     this.props.getItems()
   }
 
   render() {
-    const {items} = this.props
+    // const {items} = this.props
 
-    let itemList
+    console.log('this props >>', this.props)
 
-    if (items.length >= 1) {
-      itemList = items.map(item => {
-        return (
-          <div key={item.id}>
-            <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
-              <Item item={item} />
-            </Link>
-          </div>
-        )
-      })
-    }
+    // let itemList
+
+    // if (items.length >= 1) {
+    //   itemList = items.map((item) => {
+    //     return (
+    //       <div key={item.id}>
+    //         <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
+    //           {/* <Item item={item} /> */}
+    //           <div>{item.name}</div>
+    //         </Link>
+    //       </div>
+    //     )
+    //   })
+    // }
 
     return (
       <div>

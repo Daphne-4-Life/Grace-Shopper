@@ -7,13 +7,11 @@ const OrderContent = require('./orderContent')
 Order.belongsTo(User)
 User.hasMany(Order)
 
-//Important: through table name is Order_Content, it shows all the items in that particular order.
+//Important: through table name is OrderContent, it shows all the items in that particular order.
 Order.belongsToMany(Item, {through: OrderContent})
-
 
 module.exports = {
   User,
   Item,
-  Order,
-  OrderContent
+  Order
 }

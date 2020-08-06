@@ -176,6 +176,27 @@ img {
 /*  end single item  */
 /* ------------------- */
 
+/* --------------------- */
+/*   start item styles   */
+/* --------------------- */
+
+#item-img {
+  display: flex;
+  padding: 20px;
+  flex: 1;
+}
+
+#item-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 2;
+}
+
+/* --------------------- */
+/*   end item styles   */
+/* --------------------- */
+
 /* ------------------- */
 /*  start auth form  */
 /* ------------------- */
@@ -195,20 +216,16 @@ img {
 /* -----------------*/
 
 /* ---------------- */
-/*   start home page  */
+/*   start home page */
 /* -----------------*/
 
-.mainComponent {
-  box-shadow: #333333 2px 2px 2px 2px;
-  margin: 2%;
-  text-align: center;
-  border-radius: 25px;
-}
+/* ---------------- */
+/*   end home page  */
+/* -----------------*/
 
-.mainComponent img {
-  border-radius: 20px;
-}
-
+/* ------------------ */
+/* start main section */
+/* ------------------ */
 main {
   align-items: center;
   display: flex;
@@ -216,6 +233,58 @@ main {
   justify-content: center;
 }
 
-/* ---------------- */
-/*   end home page  */
-/* -----------------*/
+.item-component {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px 2px;
+  margin: 2%;
+  text-align: center;
+  /* border-radius: 25px; */
+  /* padding-left: 20px; */
+}
+
+.item-component:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px 2px;
+}
+
+.item-component img {
+  /* border-radius: 20px; */
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+}
+/* ------------------ */
+/*  end main section  */
+/* ------------------ */
+
+/* ----------------------------- */
+/*  start shared element styles  */
+/* ----------------------------- */
+
+.delete-btn {
+  float: right;
+}
+
+#item-wrap {
+  display: flex;
+  flex-direction: row;
+  padding: 0p;
+  margin-bottom: 15px;
+  background-color: grey;
+}
+
+#item-info h3 {
+  padding: 3px 0;
+  margin: 0;
+}
+
+#item-info p {
+  padding: 3px 0;
+  margin: 0;
+}
+
+/* ----------------------------- */
+/*   end shared element styles   */
+/* ----------------------------- */

@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {fetchItems} from '../store/item'
-// import Item from './Item'
+import Item from './Item'
 
 export class AllItems extends React.Component {
   componentDidMount() {
@@ -19,8 +19,8 @@ export class AllItems extends React.Component {
         return (
           <div key={item.id}>
             <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
-              {/* <Item item={item} /> */}
-              <div>{item.name}</div>
+              <Item item={item} />
+              {/* <div>{item.name}</div> */}
             </Link>
           </div>
         )

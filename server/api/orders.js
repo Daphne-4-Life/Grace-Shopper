@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const {Order} = require('../db/models')
+const {OrderContent} = require('../db/models')
 module.exports = router
 
 router.get('/', async (req, res, next) => {
@@ -11,10 +12,28 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:userId', async (req, res, next) => {
   try {
-    const orderId = await Order.findByPk(req.params.id)
-    res.json(orderId)
+    const userOrders = await Order.findAll({
+      where: {
+        userId: req.params.userId
+      }
+    })
+    res.json(userOrders)
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.get('/:userId/cart', async (req, res, next) => {
+  try {
+    const userOrders = await Order.findAll({
+      where: {
+        userId: req.params.userId,
+        status: 'pending'
+      }
+    })
+    res.json(userOrders)
   } catch (error) {
     next(error)
   }
@@ -29,24 +48,19 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-router.put('/:id', async (req, res, next) => {
+router.put('/:userId/cart', async (req, res, next) => {
   try {
-    const order = await Order.findByPk(req.params.id)
-    const updatedOrder = await order.update(req.body)
-    res.json(updatedOrder)
-  } catch (error) {
-    next(error)
-  }
-})
-
-router.delete('/:id', async (req, res, next) => {
-  try {
-    const deleteOrder = await Order.destroy({
+    const order = await Order.findOne({
+      include: {
+        model: OrderContent
+      },
       where: {
-        id: req.params.id
+        userId: req.params.userId,
+        status: 'pending'
       }
     })
-    res.json(deleteOrder)
+    const updatedOrder = await order.update(req.body)
+    res.json(updatedOrder)
   } catch (error) {
     next(error)
   }

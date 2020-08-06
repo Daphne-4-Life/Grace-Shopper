@@ -14,7 +14,7 @@ module.exports = router
  * set these environment variables like so:
  *
  * process.env.GOOGLE_CLIENT_ID = 'your google client id'
- * process.env.GOOGLE_CLIENT_SECRET = 'your google client secret'
+ * process.env.aGOOGLE_CLIENT_SECRET = 'your google client secret'
  * process.env.GOOGLE_CALLBACK = '/your/google/callback'
  */
 
@@ -56,7 +56,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
   router.get(
     '/callback',
     passport.authenticate('google', {
-      successRedirect: '/home',
+      successRedirect: '/',
       failureRedirect: '/login'
     })
   )

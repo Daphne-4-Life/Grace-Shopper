@@ -39,6 +39,9 @@ export class AllItems extends React.Component {
 
     return (
       <div>
+        <h5>
+          <Link to="/">Back to home</Link>
+        </h5>
         {this.props.match.path === '/allItems' ? (
           <h3>All Items</h3>
         ) : this.props.match.path === '/shortSleeveItems' ? (

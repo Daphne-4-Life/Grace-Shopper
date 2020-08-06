@@ -36,6 +36,28 @@ export const fetchItems = () => {
   }
 }
 
+export const fetchLongSleeveItems = () => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get('/api/items/longSleeve')
+      dispatch(setItems(data))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+export const fetchShortSleeveItems = () => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get('/api/items/shortSleeve')
+      dispatch(setItems(data))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
 export const addedItem = addItemForm => {
   return async dispatch => {
     try {

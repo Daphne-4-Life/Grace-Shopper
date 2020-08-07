@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
@@ -11,19 +11,19 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           <ul className="nav-links">
             <li className="nav-item">
-              <Link id="shirt-logo" to="/">
+              <NavLink id="shirt-logo" to="/">
                 <h3>The Shirt Shop</h3>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/profile">
+              <NavLink to="/profile">
                 <h3>Profile</h3>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="#" onClick={handleClick}>
+              <NavLink to="#" onClick={handleClick}>
                 Logout
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -31,15 +31,15 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           <ul className="nav-links">
             <li className="nav-item">
-              <Link id="shirt-logo" to="/home">
+              <NavLink id="shirt-logo" to="/home">
                 <h3>The Shirt Shop</h3>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/login">Login</Link>
+              <NavLink to="/login">Login</NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/signup">Sign Up</Link>
+              <NavLink to="/signup">Sign Up</NavLink>
             </li>
           </ul>
         </div>

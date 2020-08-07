@@ -12,11 +12,13 @@ async function seed() {
 
   const users = await Promise.all([
     User.create({
-      firstName: 'cody',
-      lastName: 'smith',
+      firstName: 'jonah',
+      lastName: 'hill',
       email: 'cody@email.com',
       password: '123',
-      address: '123 10th St, Ny Ny 11249'
+      address: '123 10th St, Ny Ny 11249',
+      imageUrl:
+        'https://images.ladbible.com/thumbnail?type=jpeg&url=https://www.unilad.co.uk/wp-content/uploads/2018/06/jonah-hill-has-pink-hair-web.jpg&quality=70&height=700'
     }),
     User.create({
       firstName: 'sally',
@@ -68,14 +70,17 @@ async function seed() {
 
   const orders = await Promise.all([
     Order.create({totalPrice: 100}),
-    Order.create({totalPrice: 200}),
-    Order.create({totalPrice: 300})
+    Order.create({totalPrice: 200, status: 'complete'}),
+    Order.create({totalPrice: 300, status: 'complete'})
   ])
 
   await orders[0].addItem(items[0])
   await orders[0].addItem(items[1])
   await orders[1].addItem(items[2])
   await orders[2].addItem(items[3])
+  await orders[0].setUser(users[0])
+  await orders[1].setUser(users[0])
+  await orders[2].setUser(users[0])
 
   const allOrderContents = await OrderContent.findAll()
   await allOrderContents[0].update({quantity: 10})

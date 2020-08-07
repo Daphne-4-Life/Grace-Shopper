@@ -6,32 +6,42 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <nav>
+    <nav className="navbar">
       {isLoggedIn ? (
-        <div id="navbar">
-          <div className="navbar-left">
-            {/* The navbar will show these links after you log in */}
-            <Link to="/">
-              <h3>The Shirt Shop</h3>
-            </Link>
-            <Link to="/profile">
-              <h3>Profile</h3>
-            </Link>
-            <a href="#" onClick={handleClick}>
-              Logout
-            </a>
-          </div>
+        <div>
+          <ul className="nav-links">
+            <li className="nav-item">
+              <Link id="shirt-logo" to="/">
+                <h3>The Shirt Shop</h3>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/profile">
+                <h3>Profile</h3>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="#" onClick={handleClick}>
+                Logout
+              </Link>
+            </li>
+          </ul>
         </div>
       ) : (
-        <div id="navbar">
-          <div className="navbar-left">
-            {/*These will show if you are NOT logged in */}
-            <Link to="/home">
-              <h3>The Shirt Shop</h3>
-            </Link>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
-          </div>
+        <div>
+          <ul className="nav-links">
+            <li className="nav-item">
+              <Link id="shirt-logo" to="/home">
+                <h3>The Shirt Shop</h3>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signup">Sign Up</Link>
+            </li>
+          </ul>
         </div>
       )}
     </nav>

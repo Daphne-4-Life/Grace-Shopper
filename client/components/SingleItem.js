@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSingleItem} from '../store/singleItem'
+import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
 
 export class SingleItem extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ export class SingleItem extends React.Component {
       sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
       colorSelection: '',
       sizeSelection: '',
-      price: 0,
+      totalPrice: 0,
       quantity: '',
       addToCartClick: false
     }
@@ -20,17 +21,17 @@ export class SingleItem extends React.Component {
   }
   async componentDidMount() {
     await this.props.getSingleItem(this.props.match.params.itemId)
+    console.log(this.props)
   }
 
   handleChange(e) {
-    console.log('in handle change')
     this.setState({
       addToCartClick: false
     })
     if (e.target.name === 'quantity') {
       let total = +e.target.value * this.props.singleItem.price
       this.setState({
-        price: total
+        totalPrice: total
       })
     }
 
@@ -39,12 +40,25 @@ export class SingleItem extends React.Component {
     })
   }
 
-  handleSubmit(e) {
-    console.log(this.props)
-
+  async handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
-    console.log(e.target)
+    await this.props.getPendingOrder(this.props.user.id)
+
+    const newTotalPrice =
+      this.props.currentOrder.currentOrder[0].totalPrice + this.state.totalPrice
+
+    this.setState({
+      totalPrice: newTotalPrice
+    })
+
+    console.log(this.props)
+    console.log('this state: ', this.state)
+    await this.props.addItemsToCart(
+      this.props.currentOrder.currentOrder[0].id,
+      this.props.match.params.itemId,
+      this.state
+    )
+
     this.setState({
       addToCartClick: true
     })
@@ -60,7 +74,7 @@ export class SingleItem extends React.Component {
               <div id="singleItemImageContainer">
                 <img id="singleItemImage" src={singleItem.imageUrl} />
               </div>
-              <form id="singleItemForm" onSubmit={this.handleSubmit}>
+              <form onSubmit={this.handleSubmit} id="singleItemForm">
                 <h2>Shirt Shop {singleItem.name}</h2>
                 <h3 id="singleItemDescription">
                   Description: {singleItem.description}
@@ -73,11 +87,11 @@ export class SingleItem extends React.Component {
                       return (
                         <li id="sizeListItem" key={element}>
                           <button
-                            type="submit"
-                            className="singleItemButton"
-                            value={element}
                             name="sizeSelection"
+                            value={element}
                             onClick={this.handleChange}
+                            type="button"
+                            className="singleItemButton"
                           >
                             {element}
                           </button>
@@ -100,7 +114,7 @@ export class SingleItem extends React.Component {
                             name="colorSelection"
                             value={element}
                             onClick={this.handleChange}
-                            type="submit"
+                            type="button"
                             className="singleItemButton"
                           >
                             {element}
@@ -123,7 +137,11 @@ export class SingleItem extends React.Component {
                   />
                 </div>
                 <div>
-                  <button id="singleItemContainerSubmitButton" type="submit">
+                  <button
+                    id="singleItemContainerSubmitButton"
+                    type="submit"
+                    onSubmit={this.handleSubmit}
+                  >
                     Add to Cart
                   </button>
                 </div>
@@ -143,13 +161,23 @@ export class SingleItem extends React.Component {
   }
 }
 const mapState = state => {
-  return {singleItem: state.singleItem}
+  return {
+    singleItem: state.singleItem,
+    user: state.user,
+    currentOrder: state.orders
+  }
 }
 
 const mapDispatch = dispatch => {
   return {
     getSingleItem: id => {
       return dispatch(fetchSingleItem(id))
+    },
+    getPendingOrder: id => {
+      return dispatch(GetOrderPendingThunk(id))
+    },
+    addItemsToCart: (orderId, itemId, orderUpdate) => {
+      return dispatch(EditCartThunk(orderId, itemId, orderUpdate))
     }
   }
 }

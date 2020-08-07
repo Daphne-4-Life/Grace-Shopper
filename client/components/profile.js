@@ -8,33 +8,57 @@ export class Profile extends React.Component {
   }
 
   render() {
-    console.log('THIS IS THE PROPS --->', this.props)
     const {firstName, lastName, email, address, imageUrl} = this.props
 
     return (
-      <div className="profile-container">
-        <h2>Account Info</h2>
-        <div id="profile-wrap">
-          <div id="profile-img">
-            <img className="profile-image" src={imageUrl} alt="User image" />
-          </div>
-          <div id="profile-info">
-            <span>
-              Name: {firstName} {lastName}
-            </span>
-            <span>Email: {email}</span>
-            <span>Address: {address}</span>
+      <div className="entire-profile-container">
+        <h2 id="account-info-header">Account Info</h2>
+        <div className="account-info">
+          <img id="profile-image" src={imageUrl} alt="User image" />
+          <div id="profile-body">
+            <h3 id="account-name">
+              {firstName.toUpperCase()} {lastName.toUpperCase()}
+            </h3>
+            <div id="account-email">
+              <h4>Email: </h4>
+              <p>{email}</p>
+            </div>
+            <div id="account-address">
+              <h4>Address: </h4>
+              <p>{address}</p>
+            </div>
+            <button id="edit-account-info-button" type="button">
+              Edit Account Info
+            </button>
           </div>
         </div>
 
-        {/* previous orders */}
-        <div className="previous-orders">
-          <h2>Order History</h2>
+        <h2 id="order-history-header">Order History</h2>
+        <div>
           {this.props.previousOrders ? (
             this.props.previousOrders.map(order => (
               <div key={order.id}>
-                <h4>Order {order.id}</h4>
-                <h4>Total Price: {order.totalPrice}</h4>
+                <div className="order-id-and-total-price">
+                  <h4>Order: {order.id}</h4>
+                  <h4>Total Price: {order.totalPrice}</h4>
+                </div>
+                <div className="previous-orders">
+                  {order.items.map(item => (
+                    <div key={item.id} className="previous-order-item">
+                      <div className="previous-order-item-img">
+                        <img src={item.imageUrl} />
+                      </div>
+                      <div className="previous-order-item-desc">
+                        <h3>{item.name}</h3>
+                        <p>💵 Price: {item.price}</p>
+                        <p>👀 Quantity: {item.quantity}</p>
+                        <p>🧠 Size: {item.size}</p>
+                        <p>🌈 Color: {item.color}</p>
+                        <p>🎲 Category: {item.category}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))
           ) : (

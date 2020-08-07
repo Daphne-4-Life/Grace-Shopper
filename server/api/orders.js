@@ -19,7 +19,7 @@ router.get('/:userId', async (req, res, next) => {
       include: {model: Item},
       where: {
         userId: req.params.userId,
-        status: 'pending'
+        status: 'complete'
       }
     })
     res.json(userOrders)

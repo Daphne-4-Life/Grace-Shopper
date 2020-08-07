@@ -37,7 +37,7 @@ export const GetOrderByUserIdThunk = userId => async dispatch => {
 
 export const GetOrderPendingThunk = userId => async dispatch => {
   try {
-    const {data} = await axios.get(`/api/orders/:${userId}/cart`)
+    const {data} = await axios.get(`/api/orders/${userId}/cart`)
     dispatch(getPendingOrder(data))
   } catch (error) {
     console.log(error)
@@ -52,7 +52,7 @@ export const EditCartThunk = (
 ) => async dispatch => {
   try {
     const {data} = await axios.put(
-      `/api/orders/:${userId}/cart/:${itemId}`,
+      `/api/orders/${userId}/cart/${itemId}`,
       orderUpdate
     )
     dispatch(updateOrder(data))

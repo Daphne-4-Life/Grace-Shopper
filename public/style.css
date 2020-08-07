@@ -175,10 +175,10 @@ img {
   height: 20px;
 }
 
-.singleItemButton:focus {
+/* .singleItemButton:focus {
   outline: none;
   box-shadow: none;
-}
+} */
 
 .white button {
   color: black;

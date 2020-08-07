@@ -219,3 +219,65 @@ main {
 /* ---------------- */
 /*   end home page  */
 /* -----------------*/
+
+/* ---------------- */
+/*   start cart page  */
+/* -----------------*/
+
+.outerContainer {
+  width: 100vw;
+  display: flex;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 3;
+  text-align: center;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+  background-color: white;
+  border: 0.5px black solid;
+  box-shadow: #333333 2px 2px 2px 2px;
+}
+
+.cartOrderSummary {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.6em;
+  margin: 2%;
+  flex-grow: 1;
+  background-color: white;
+  border: 2px black solid;
+  box-shadow: #333333 2px 2px 2px 2px;
+}
+
+.billing-container {
+  display: flex;
+  margin-top: 5%;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6em;
+  margin: 2%;
+  flex-grow: 1;
+  background-color: white;
+  border: 2px black solid;
+  box-shadow: #333333 2px 2px 2px 2px;
+}
+
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------- */
+/*   end cart page  */
+/* -----------------*/

@@ -11,7 +11,8 @@ export class SingleItem extends React.Component {
       colorSelection: '',
       sizeSelection: '',
       price: 0,
-      quantity: ''
+      quantity: '',
+      addToCartClick: false
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -22,6 +23,10 @@ export class SingleItem extends React.Component {
   }
 
   handleChange(e) {
+    console.log('in handle change')
+    this.setState({
+      addToCartClick: false
+    })
     if (e.target.name === 'quantity') {
       let total = +e.target.value * this.props.singleItem.price
       this.setState({
@@ -40,6 +45,9 @@ export class SingleItem extends React.Component {
     e.preventDefault()
     console.log(this.state)
     console.log(e.target)
+    this.setState({
+      addToCartClick: true
+    })
   }
 
   render() {
@@ -118,6 +126,11 @@ export class SingleItem extends React.Component {
                   </button>
                 </div>
               </form>
+              {this.state.addToCartClick ? (
+                <div>Items Added to cart</div>
+              ) : (
+                <div />
+              )}
             </div>
           ) : (
             <h1>Sorry, Item Does Not Exist.</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 /**
  * COMPONENT
@@ -12,30 +13,39 @@ export const UserHome = props => {
     <div>
       <div id="welcome-user">
         <h3>Welcome, {email}</h3>
+        {/* <img src="img/hero_1.jpg" /> */}
       </div>
-      <div>
-        <main>
-          <div className="mainComponent">
-            <a href="/allItems">
-              <img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--_qAevh2S--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,h_446,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/1571971050590/Gap-Classic-T-Shirt.jpg" />
-              <h4>All Items</h4>
-            </a>
-          </div>
+      {/* <div id="hero-image">
+      </div> */}
 
-          <div className="mainComponent">
-            <a href="/shortSleeveItems">
-              <img src="https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg" />
-              <h4>Short Sleeve Shirts</h4>
-            </a>
-          </div>
-          <div className="mainComponent">
-            <a href="/longSleeveItems">
-              <img src="https://www.uberprints.com/assets/images/products/jpg/800x800/GIG240_1_WHT.jpg" />
-              <h4>Long Sleeve Shirts</h4>
-            </a>
-          </div>
-        </main>
-      </div>
+      {/* main section */}
+      <section className="main-section">
+        <div className="item-component">
+          <Link to="/allItems" style={{textDecoration: 'none', color: '#FFF'}}>
+            <img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--_qAevh2S--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,h_446,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/1571971050590/Gap-Classic-T-Shirt.jpg" />
+            <h4>All Shirts</h4>
+          </Link>
+        </div>
+
+        <div className="item-component">
+          <Link
+            to="/shortSleeveItems"
+            style={{textDecoration: 'none', color: '#FFF'}}
+          >
+            <img src="https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg" />
+            <h4>Short Sleeve Shirts</h4>
+          </Link>
+        </div>
+        <div className="item-component">
+          <Link
+            to="/longSleeveItems"
+            style={{textDecoration: 'none', color: '#FFF'}}
+          >
+            <img src="https://www.uberprints.com/assets/images/products/jpg/800x800/GIG240_1_WHT.jpg" />
+            <h4>Long Sleeve Shirts</h4>
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }

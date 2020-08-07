@@ -1,37 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <nav>
+    <nav className="navbar">
       {isLoggedIn ? (
-        <div id="navbar">
-          <div className="navbar-left">
-            {/* The navbar will show these links after you log in */}
-            <Link to="/">
-              <h3>The Shirt Shop</h3>
-            </Link>
-            <Link to="/profile">
-              <h3>Profile</h3>
-            </Link>
-            <a href="#" onClick={handleClick}>
-              Logout
-            </a>
-          </div>
+        <div>
+          <ul className="nav-links">
+            <li className="nav-item">
+              <NavLink id="shirt-logo" to="/">
+                <h3>The Shirt Shop</h3>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/profile">
+                <h3>Profile</h3>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="#" onClick={handleClick}>
+                Logout
+              </NavLink>
+            </li>
+          </ul>
         </div>
       ) : (
-        <div id="navbar">
-          <div className="navbar-left">
-            {/*These will show if you are NOT logged in */}
-            <Link to="/home">
-              <h3>The Shirt Shop</h3>
-            </Link>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
-          </div>
+        <div>
+          <ul className="nav-links">
+            <li className="nav-item">
+              <NavLink id="shirt-logo" to="/home">
+                <h3>The Shirt Shop</h3>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login">Login</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/signup">Sign Up</NavLink>
+            </li>
+          </ul>
         </div>
       )}
     </nav>

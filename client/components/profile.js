@@ -14,19 +14,20 @@ export class Profile extends React.Component {
     return (
       <div className="profile-container">
         <h2>Account Info</h2>
-        <div className="profile-image">
-          <img className="profile-image" src={imageUrl} alt="User image" />
-        </div>
-        <div className="profile-body">
-          <h3>
-            {firstName.toUpperCase()} {lastName.toUpperCase()}
-          </h3>
-          <h4>Email</h4>
-          <p>{email}</p>
-          <h4>Address</h4>
-          <p>{address}</p>
+        <div id="profile-wrap">
+          <div id="profile-img">
+            <img className="profile-image" src={imageUrl} alt="User image" />
+          </div>
+          <div id="profile-info">
+            <span>
+              Name: {firstName} {lastName}
+            </span>
+            <span>Email: {email}</span>
+            <span>Address: {address}</span>
+          </div>
         </div>
 
+        {/* previous orders */}
         <div className="previous-orders">
           <h2>Order History</h2>
           {this.props.previousOrders ? (

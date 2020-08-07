@@ -20,9 +20,18 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <h3>Profile</h3>
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" id="nav-right">
               <NavLink to="#" onClick={handleClick}>
                 Logout
+              </NavLink>
+            </li>
+            <li className="nav-item" id="nav-right">
+              <NavLink to="/orders/1/cart">
+                <img
+                  className="cart-image"
+                  src="img/cart_icon_1.png"
+                  alt="User image"
+                />
               </NavLink>
             </li>
           </ul>

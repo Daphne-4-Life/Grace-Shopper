@@ -1,12 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+
+import {fetchItems} from '../store/item'
+import Item from './Item'
+
 import {
   fetchItems,
   fetchLongSleeveItems,
   fetchShortSleeveItems
 } from '../store/item'
 // import Item from './Item'
+
 
 export class AllItems extends React.Component {
   componentDidMount() {
@@ -17,6 +22,7 @@ export class AllItems extends React.Component {
     } else if (this.props.match.path === '/longSleeveItems') {
       this.props.getLongSleeveItems()
     }
+    console.log(this.props)
   }
 
   render() {
@@ -27,10 +33,12 @@ export class AllItems extends React.Component {
     if (items.length >= 1) {
       itemList = items.map(item => {
         return (
-          <div key={item.id}>
-            <Link to={`/items/${item.id}`} style={{textDecoration: 'none'}}>
-              {/* <Item item={item} /> */}
-              <div>{item.name}</div>
+          <div id="item-link" key={item.id}>
+            <Link
+              to={`/items/${item.id}`}
+              style={{textDecoration: 'none', color: '#FFF'}}
+            >
+              <Item item={item} />
             </Link>
           </div>
         )
@@ -38,6 +46,10 @@ export class AllItems extends React.Component {
     }
 
     return (
+
+      <div className="all-items">
+        <h3>All Shirts</h3>
+
       <div>
         <h5>
           <Link to="/">Back to home</Link>
@@ -51,10 +63,11 @@ export class AllItems extends React.Component {
         )}
 
         {/* create all items */}
+
         {items.length >= 1 ? (
           itemList
         ) : (
-          <h4>There are no items registered in the database.</h4>
+          <h3>Sorry, we're all out of shirts.</h3>
         )}
       </div>
     )

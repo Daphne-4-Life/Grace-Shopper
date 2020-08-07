@@ -1,7 +1,5 @@
 const router = require('express').Router()
-const {Order} = require('../db/models')
-const {OrderContent} = require('../db/models')
-const {User} = require('../db/models')
+const {User, Order, Item, OrderContent} = require('../db/models')
 module.exports = router
 
 //GET ALL ORDERS (IN CASE WE EVER NEED IT)
@@ -18,9 +16,10 @@ router.get('/', async (req, res, next) => {
 router.get('/:userId', async (req, res, next) => {
   try {
     const userOrders = await Order.findAll({
-      include: {model: OrderContent},
+      include: {model: Item},
       where: {
-        userId: req.params.userId
+        userId: req.params.userId,
+        status: 'pending'
       }
     })
     res.json(userOrders)
@@ -33,7 +32,7 @@ router.get('/:userId', async (req, res, next) => {
 router.get('/:userId/cart', async (req, res, next) => {
   try {
     const userOrders = await Order.findOne({
-      include: {model: OrderContent},
+      include: {model: Item},
       where: {
         userId: req.params.userId,
         status: 'pending'
@@ -73,13 +72,13 @@ router.put('/:userId/cart/complete', async (req, res, next) => {
   }
 })
 
-//EDITS THE CART THROUGH ORDER_CONTENT BASED ON ITEM CHOSEN TO UPDATE AND ORDERID
+//Editing cart
 router.put('/:userId/cart/:itemId', async (req, res, next) => {
   try {
     const {quantity, price, color, size} = req.body
     const order = await Order.findOne({
       include: {
-        model: OrderContent
+        model: Item
       },
       where: {
         userId: req.params.userId,
@@ -102,6 +101,34 @@ router.put('/:userId/cart/:itemId', async (req, res, next) => {
     const totalPrice = updatedOrderContent.price * updatedOrderContent.quantity
     const updatedOrder = await order.update({totalPrice})
     res.json(updatedOrder)
+  } catch (error) {
+    next(error)
+  }
+})
+
+//Adding items to cart
+router.post('/:userId/cart/:itemId', async (req, res, next) => {
+  try {
+    let {quantity} = req.body
+    const item = await Item.findByPk(req.params.itemId)
+    const order = await Order.findOne({
+      include: {
+        model: Item
+      },
+      where: {
+        userId: req.params.userId,
+        status: 'pending'
+      }
+    })
+    order.setItem(item)
+    const orderContent = await OrderContent.findOne({
+      where: {
+        orderId: order.id,
+        itemId: item.id
+      }
+    })
+    await orderContent.update({quantity})
+    res.json(order)
   } catch (error) {
     next(error)
   }

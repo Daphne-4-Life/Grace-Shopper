@@ -3,20 +3,12 @@ import {connect} from 'react-redux'
 import {GetOrderByUserIdThunk} from '../store'
 
 export class Profile extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      previousOrders: []
-    }
-  }
-
   async componentDidMount() {
     await this.props.getPreviousOrders(this.props.userId)
   }
 
   render() {
     console.log('THIS IS THE PROPS --->', this.props)
-    console.log('THIS IS THE STATE --->', this.state)
     const {firstName, lastName, email, address, imageUrl} = this.props
 
     return (
@@ -34,10 +26,11 @@ export class Profile extends React.Component {
           <h4>Address</h4>
           <p>{address}</p>
         </div>
+
         <div className="previous-orders">
           <h2>Order History</h2>
-          {this.state.previousOrders ? (
-            this.state.previousOrders.map(order => (
+          {this.props.previousOrders ? (
+            this.props.previousOrders.map(order => (
               <div key={order.id}>
                 <h4>Order {order.id}</h4>
                 <h4>Total Price: {order.totalPrice}</h4>

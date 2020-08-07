@@ -3,6 +3,8 @@
 const db = require('../server/db')
 const {User} = require('../server/db/models')
 const {Item} = require('../server/db/models')
+const {Order} = require('../server/db/models')
+//const {OrderContent} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -30,6 +32,7 @@ async function seed() {
       name: 'Music Shirt',
       price: 10,
       size: 'M',
+      color: 'blue',
       category: 'short sleeve',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
@@ -38,6 +41,7 @@ async function seed() {
       name: 'Pet Shirt',
       price: 10,
       size: 'S',
+      color: 'red',
       category: 'short sleeve',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
@@ -46,6 +50,7 @@ async function seed() {
       name: 'Custom Shirt',
       price: 10,
       category: 'long sleeve',
+      color: 'red',
       size: 'M',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
@@ -54,14 +59,22 @@ async function seed() {
       name: 'Athletic Shirt',
       price: 10,
       category: 'long sleeve',
+      color: 'red',
       size: 'L',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     })
   ])
 
+  const orders = await Promise.all([
+    Order.create({}),
+    Order.create({}),
+    Order.create({})
+  ])
+
   console.log(`seeded ${users.length} users`)
-  console.log(`seeded ${items.length} users`)
+  console.log(`seeded ${items.length} items`)
+  console.log(`seeded ${orders.length} orders`)
   console.log(`seeded successfully`)
 }
 

@@ -1,12 +1,28 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+
 import {fetchItems} from '../store/item'
 import Item from './Item'
 
+import {
+  fetchItems,
+  fetchLongSleeveItems,
+  fetchShortSleeveItems
+} from '../store/item'
+// import Item from './Item'
+
+
 export class AllItems extends React.Component {
   componentDidMount() {
-    this.props.getItems()
+    if (this.props.match.path === '/allItems') {
+      this.props.getItems()
+    } else if (this.props.match.path === '/shortSleeveItems') {
+      this.props.getShortSleeveItems()
+    } else if (this.props.match.path === '/longSleeveItems') {
+      this.props.getLongSleeveItems()
+    }
+    console.log(this.props)
   }
 
   render() {
@@ -30,8 +46,24 @@ export class AllItems extends React.Component {
     }
 
     return (
+
       <div className="all-items">
         <h3>All Shirts</h3>
+
+      <div>
+        <h5>
+          <Link to="/">Back to home</Link>
+        </h5>
+        {this.props.match.path === '/allItems' ? (
+          <h3>All Items</h3>
+        ) : this.props.match.path === '/shortSleeveItems' ? (
+          <h3>Short Sleeve Items</h3>
+        ) : (
+          <h3>Long Sleeve Items</h3>
+        )}
+
+        {/* create all items */}
+
         {items.length >= 1 ? (
           itemList
         ) : (
@@ -47,7 +79,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getItems: () => dispatch(fetchItems())
+  getItems: () => dispatch(fetchItems()),
+  getShortSleeveItems: () => dispatch(fetchShortSleeveItems()),
+  getLongSleeveItems: () => dispatch(fetchLongSleeveItems())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AllItems)

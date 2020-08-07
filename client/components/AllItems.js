@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import {fetchItems} from '../store/item'
 import Item from './Item'
 
 import {
@@ -11,7 +10,6 @@ import {
   fetchShortSleeveItems
 } from '../store/item'
 // import Item from './Item'
-
 
 export class AllItems extends React.Component {
   componentDidMount() {
@@ -46,29 +44,29 @@ export class AllItems extends React.Component {
     }
 
     return (
-
       <div className="all-items">
         <h3>All Shirts</h3>
 
-      <div>
-        <h5>
-          <Link to="/">Back to home</Link>
-        </h5>
-        {this.props.match.path === '/allItems' ? (
-          <h3>All Items</h3>
-        ) : this.props.match.path === '/shortSleeveItems' ? (
-          <h3>Short Sleeve Items</h3>
-        ) : (
-          <h3>Long Sleeve Items</h3>
-        )}
+        <div>
+          <h5>
+            <Link to="/">Back to home</Link>
+          </h5>
+          {this.props.match.path === '/allItems' ? (
+            <h3>All Items</h3>
+          ) : this.props.match.path === '/shortSleeveItems' ? (
+            <h3>Short Sleeve Items</h3>
+          ) : (
+            <h3>Long Sleeve Items</h3>
+          )}
 
-        {/* create all items */}
+          {/* create all items */}
 
-        {items.length >= 1 ? (
-          itemList
-        ) : (
-          <h3>Sorry, we're all out of shirts.</h3>
-        )}
+          {items.length >= 1 ? (
+            itemList
+          ) : (
+            <h3>Sorry, we're all out of shirts.</h3>
+          )}
+        </div>
       </div>
     )
   }

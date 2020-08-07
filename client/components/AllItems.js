@@ -30,13 +30,12 @@ export class AllItems extends React.Component {
     }
 
     return (
-      <div>
-        <h3>All Items</h3>
-        {/* create all items */}
+      <div className="all-items">
+        <h3>All Shirts</h3>
         {items.length >= 1 ? (
           itemList
         ) : (
-          <h4>There are no items registered in the database.</h4>
+          <h3>Sorry, we're all out of shirts.</h3>
         )}
       </div>
     )

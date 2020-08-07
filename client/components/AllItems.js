@@ -1,15 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-
 import Item from './Item'
-
 import {
   fetchItems,
   fetchLongSleeveItems,
   fetchShortSleeveItems
 } from '../store/item'
-// import Item from './Item'
 
 export class AllItems extends React.Component {
   componentDidMount() {
@@ -45,12 +42,7 @@ export class AllItems extends React.Component {
 
     return (
       <div className="all-items">
-        <h3>All Shirts</h3>
-
         <div>
-          <h5>
-            <Link to="/">Back to home</Link>
-          </h5>
           {this.props.match.path === '/allItems' ? (
             <h3>All Items</h3>
           ) : this.props.match.path === '/shortSleeveItems' ? (

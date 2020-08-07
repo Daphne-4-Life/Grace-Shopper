@@ -76,9 +76,11 @@ export class SingleItem extends React.Component {
               </div>
               <form onSubmit={this.handleSubmit} id="singleItemForm">
                 <h2>Shirt Shop {singleItem.name}</h2>
-                <h3 id="singleItemDescription">{singleItem.description}</h3>
-                <h4>${singleItem.price}.00</h4>
-                <div>
+                <h3 id="singleItemDescription">
+                  Description: {singleItem.description}
+                </h3>
+                <h4>Price: ${singleItem.price}.00</h4>
+                <div id="single-item-info">
                   <strong>Size: </strong>
                   <ul id="singleItemList">
                     {this.state.sizes.map(element => {

@@ -126,18 +126,10 @@ router.delete('/:userId', async (req, res, next) => {
 router.put('/:userId', async (req, res, next) => {
   try {
     const {updatedFields} = req.body
-    const user = await User.update(
-      {...updatedFields},
-      {where: {id: req.params.userId}}
-    )
-    const respondUser = {
-      email: user.email,
-      address: user.address,
-      imageUrl: user.imageUrl,
-      firstName: user.firstName,
-      lastName: user.lastName
-    }
-    res.json(respondUser)
+    console.log(updatedFields)
+    const user = await User.findByPk(req.params.userId)
+    await user.update({...updatedFields})
+    res.json(user)
   } catch (error) {
     next(error)
   }

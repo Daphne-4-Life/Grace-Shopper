@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {GetOrderByUserIdThunk} from '../store'
+import {Link} from 'react-router-dom'
 
 export class Profile extends React.Component {
   async componentDidMount() {
@@ -14,22 +15,24 @@ export class Profile extends React.Component {
       <div className="entire-profile-container">
         <h2 id="account-info-header">Account Info</h2>
         <div className="account-info">
-          <img id="profile-image" src={imageUrl} alt="User image" />
-          <div id="profile-body">
-            <h3 id="account-name">
+          <img className="profile-image" src={imageUrl} alt="User image" />
+          <div className="profile-body">
+            <h3 className="account-name">
               {firstName.toUpperCase()} {lastName.toUpperCase()}
             </h3>
-            <div id="account-email">
+            <div className="account-email">
               <h4>Email: </h4>
               <p>{email}</p>
             </div>
-            <div id="account-address">
+            <div className="account-address">
               <h4>Address: </h4>
               <p>{address}</p>
             </div>
-            <button id="edit-account-info-button" type="button">
-              Edit Account Info
-            </button>
+            <Link to="/profile/editInfo">
+              <button id="edit-account-info-button" type="button">
+                Edit Account Info
+              </button>
+            </Link>
           </div>
         </div>
 

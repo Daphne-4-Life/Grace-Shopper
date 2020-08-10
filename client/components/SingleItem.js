@@ -23,7 +23,6 @@ export class SingleItem extends React.Component {
 
   async componentDidMount() {
     await this.props.getSingleItem(this.props.match.params.itemId)
-    console.log(this.props)
     this.setState({
       itemName: this.props.singleItem.name
     })
@@ -60,7 +59,6 @@ export class SingleItem extends React.Component {
     })
 
     let totalQuantity = this.calculateTotalQuantity()
-    console.log(totalQuantity)
 
     await this.props.addItemsToCart(
       this.props.currentOrder.currentOrder[0].id,
@@ -75,10 +73,7 @@ export class SingleItem extends React.Component {
   }
 
   calculateTotalQuantity() {
-    console.log(this.state.quantity)
-
     let totalQuantity = +this.state.quantity
-    console.log(totalQuantity)
     this.props.currentOrder.currentOrder[0].items.forEach(element => {
       if (element.OrderContent.itemId === this.props.singleItem.id) {
         totalQuantity = totalQuantity + element.OrderContent.quantity

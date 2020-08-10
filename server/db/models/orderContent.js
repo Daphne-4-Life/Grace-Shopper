@@ -6,12 +6,12 @@ const OrderContent = db.define('OrderContent', {
     type: Sequelize.INTEGER,
     allowNull: false,
     defaultValue: 0
-  },
-  color: {
-    type: Sequelize.STRING
-  },
-  size: {
-    type: Sequelize.STRING
   }
 })
+
+//store historic price - price of specific item
+
+OrderContent.prototype.updateQuantity = function(quantity) {
+  return this.update({quantity: quantity})
+}
 module.exports = OrderContent

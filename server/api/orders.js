@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {User, Order, Item, OrderContent} = require('../db/models')
+const {Order, Item, OrderContent} = require('../db/models')
 module.exports = router
 
 //GET ALL ORDERS (IN CASE WE EVER NEED IT)
@@ -28,7 +28,8 @@ router.get('/:userId', async (req, res, next) => {
   }
 })
 
-//GET CURRENT PENDING ORDER
+//GET CURRENT PENDING ORDER OR CREATES A NEW ORDER
+//include set parent here
 router.get('/:userId/cart', async (req, res, next) => {
   try {
     const userOrders = await Order.findOrCreate({
@@ -38,20 +39,7 @@ router.get('/:userId/cart', async (req, res, next) => {
         status: 'pending'
       }
     })
-    console.log(userOrders)
     res.json(userOrders)
-  } catch (error) {
-    next(error)
-  }
-})
-
-//CREATES A NEW ORDER
-router.post('/:userId', async (req, res, next) => {
-  try {
-    const newOrder = await Order.create()
-    const user = await User.findByPk(req.params.userId)
-    newOrder.setParent(user)
-    res.json(newOrder)
   } catch (error) {
     next(error)
   }
@@ -76,25 +64,29 @@ router.put('/:userId/cart/complete', async (req, res, next) => {
 //Editing cart
 router.put('/:orderId/cart/:itemId', async (req, res, next) => {
   try {
-    let {quantity, totalPrice, colorSelection, sizeSelection} = req.body
+    let {totalQuantity, totalPrice} = req.body
 
-    await Order.findOne({
+    let currentOrder = await Order.findOne({where: {id: req.params.orderId}})
+    currentOrder.update({totalPrice: totalPrice})
+
+    let newItem = await Item.findByPk(req.params.itemId)
+
+    const updatedOrderContent = OrderContent.findOne({
       where: {
-        id: req.params.orderId
+        orderId: req.params.orderId,
+        itemId: req.params.itemId
       }
     })
-      .then(order => order.update({totalPrice: totalPrice}))
+      .then(order => {
+        if (order) {
+          order.update({quantity: totalQuantity})
+        } else {
+          currentOrder.addItem(newItem, {through: {quantity: totalQuantity}})
+        }
+      })
       .catch(next)
 
-    // const updatedOrderContent = await OrderContent.findOrCreate({
-    //   where: {
-    //     orderId: req.params.orderId,
-    //     itemId: req.params.itemId,
-    //     color: colorSelection,
-    //     size: sizeSelection,
-    //   },
-    // })
-    res.json(updatedOrder)
+    res.json(updatedOrderContent)
   } catch (error) {
     next(error)
   }

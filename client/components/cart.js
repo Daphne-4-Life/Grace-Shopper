@@ -1,12 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import GetOrderPendingThunk from '../store/order'
+import {GetOrderPendingThunk} from '../store/order'
 import Billing from './Billing'
 import CartItem from './CartItem'
 
 class Cart extends React.Component {
-  render() {
+  componentDidMount() {
+    this.props.OrderPending(this.props.user.id)
     console.log(this.props)
+  }
+  render() {
+    console.log('currentOrder: ', this.props)
+    let currentOrder = this.props.currentOrder.currentOrder[0] || []
+    console.log(currentOrder)
+
     return (
       <div>
         <div className="outerContainer">
@@ -37,7 +44,8 @@ class Cart extends React.Component {
 }
 
 const mapState = state => ({
-  currentOrder: state.currentOrder
+  currentOrder: state.orders,
+  user: state.user
 })
 
 const mapDispatch = dispatch => ({

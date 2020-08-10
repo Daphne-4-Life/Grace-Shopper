@@ -3,9 +3,9 @@ const db = require('../db')
 
 const Order = db.define('order', {
   totalPrice: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.INTEGER,
     allowNull: true,
-    defaultValue: 0.0
+    defaultValue: 0
   },
   status: {
     type: Sequelize.ENUM('pending', 'complete'),

@@ -9,6 +9,11 @@ import {
 } from '../store/item'
 
 export class AllItems extends React.Component {
+  constructor(props) {
+    super(props)
+    this.reduce = this.reduce.bind(this)
+  }
+
   componentDidMount() {
     if (this.props.match.path === '/allItems') {
       this.props.getItems()
@@ -17,11 +22,20 @@ export class AllItems extends React.Component {
     } else if (this.props.match.path === '/longSleeveItems') {
       this.props.getLongSleeveItems()
     }
-    console.log(this.props)
+  }
+
+  reduce(items) {
+    return items.reduce(function(accumulator, currentValue) {
+      if (!accumulator.some(e => e.name === currentValue.name)) {
+        accumulator.push(currentValue)
+      }
+      return accumulator
+    }, [])
   }
 
   render() {
-    const {items} = this.props || []
+    let {items} = this.props || []
+    items = this.reduce(items)
 
     let itemList
 

@@ -32,7 +32,8 @@ const User = db.define('user', {
     defaultValue: false
   },
   address: {
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING,
+    defaultValue: '123 10th St, Ny Ny 11249',
     allowNull: false
   },
   imageUrl: {
@@ -42,10 +43,12 @@ const User = db.define('user', {
   },
   firstName: {
     type: Sequelize.STRING,
+    defaultValue: 'Jonah',
     allowNull: false
   },
   lastName: {
     type: Sequelize.STRING,
+    defaultValue: 'Hill',
     allowNull: false
   }
 })

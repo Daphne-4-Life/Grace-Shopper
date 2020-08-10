@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
+//work on security / admin privileges
+
 // GET items default
 router.get('/', async (req, res, next) => {
   try {
@@ -11,6 +13,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
+//utilize param / combine into one route
 router.get('/longSleeve', async (req, res, next) => {
   try {
     const items = await Item.findAll({
@@ -32,6 +35,32 @@ router.get('/shortSleeve', async (req, res, next) => {
       }
     })
     res.json(items)
+  } catch (error) {
+    next(error)
+  }
+})
+
+//clarify route name
+router.get('/changeSingleItem', async (req, res, next) => {
+  const name = req.query.name
+  const color = req.query.color
+  const size = req.query.size
+
+  try {
+    const item = await Item.findAll({
+      where: {
+        name: name,
+        color: color,
+        size: size
+      }
+    })
+    if (!item) {
+      //check if error message is necessary
+      const error = Error(`Sorry, item ID: ${item} was not found`)
+      error.status = 404
+      return next(error)
+    }
+    res.send(item)
   } catch (error) {
     next(error)
   }

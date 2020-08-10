@@ -30,9 +30,21 @@ async function seed() {
   ])
 
   const items = await Promise.all([
+    //blue music shirt
     Item.create({
       name: 'Music Shirt',
       price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
       size: 'M',
       color: 'blue',
       category: 'short sleeve',
@@ -40,8 +52,145 @@ async function seed() {
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     }),
     Item.create({
-      name: 'Pet Shirt',
+      name: 'Music Shirt',
       price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //white music shirt
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //black music shirt
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //red music shirt
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
       size: 'S',
       color: 'red',
       category: 'short sleeve',
@@ -49,8 +198,269 @@ async function seed() {
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     }),
     Item.create({
-      name: 'Custom Shirt',
+      name: 'Music Shirt',
       price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //orange music shirt
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'orange',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Music Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //athletic shirt
+    //blue atheletic shirt
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //white Athletic shirt
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //black Athletic shirt
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //red Athletic shirt
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'red',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
       category: 'long sleeve',
       color: 'red',
       size: 'M',
@@ -60,9 +470,601 @@ async function seed() {
     Item.create({
       name: 'Athletic Shirt',
       price: 10,
+      quantity: 50,
       category: 'long sleeve',
       color: 'red',
       size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //orange Athletic shirt
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'orange',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Athletic Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //pet shirt
+    //blue pet shirt
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //white Pet shirt
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //black Pet shirt
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //red Pet shirt
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'red',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //orange Pet shirt
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'orange',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Pet Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //custom shirt
+    //blue Custom shirt
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'blue',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //white Custom shirt
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'white',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //black Custom shirt
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'M',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'L',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'XXL',
+      color: 'black',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //red Custom shirt
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'red',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'red',
+      size: 'XXL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+
+    //orange Custom shirt
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      size: 'S',
+      color: 'orange',
+      category: 'short sleeve',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'M',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'L',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      color: 'orange',
+      size: 'XL',
+      imageUrl:
+        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+    }),
+    Item.create({
+      name: 'Custom Shirt',
+      price: 10,
+      quantity: 50,
+      category: 'long sleeve',
+      size: 'XXL',
       imageUrl:
         'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
     })

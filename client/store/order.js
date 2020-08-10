@@ -24,6 +24,7 @@ export const updateOrder = updatedOrder => ({
   type: UPDATE_ORDER,
   updatedOrder
 })
+
 //thunk
 //get order thunk for the pending orders (to represent cart)
 export const GetOrderByUserIdThunk = userId => async dispatch => {
@@ -48,8 +49,10 @@ export const GetOrderPendingThunk = userId => async dispatch => {
 export const EditCartThunk = (
   userId,
   itemId,
-  orderUpdate
+  orderUpdate,
+  quantity
 ) => async dispatch => {
+  orderUpdate.totalQuantity = quantity
   try {
     const {data} = await axios.put(
       `/api/orders/${userId}/cart/${itemId}`,
@@ -84,11 +87,12 @@ const initialState = {
 
 //reducer
 export default function orderReducer(state = initialState, action) {
+  console.log(action)
   switch (action.type) {
     case GET_ALL_ORDERS:
       return {...state, previousOrders: action.orders}
     case GET_PENDING_ORDER:
-      return {...state, currentOrder: action.pendingOrder}
+      return {...state}
     case COMPLETE_ORDER:
       return {
         currentOrder: action.createdOrder,

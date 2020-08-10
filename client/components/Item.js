@@ -12,8 +12,8 @@ const Item = props => {
         <span>Name: {item.name}</span>
         <span>Price: {item.price}</span>
         <span>Description: {item.description}</span>
-        <span>Size: {item.size}</span>
-        <span>Color: {item.color}</span>
+        <span>Sizes: S, M, L, XL, XXL</span>
+        <span>Colors: black, white, red, orange, blue</span>
         <span>Category: {item.category}</span>
       </div>
     </div>

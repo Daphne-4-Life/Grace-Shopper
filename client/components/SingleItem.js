@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchSingleItem} from '../store/singleItem'
+import {fetchSingleItem, changeSingleItem} from '../store/singleItem'
 import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
 
 export class SingleItem extends React.Component {
@@ -8,23 +8,28 @@ export class SingleItem extends React.Component {
     super(props)
     this.state = {
       colors: ['black', 'white', 'red', 'orange', 'blue'],
-      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
-      colorSelection: '',
-      sizeSelection: '',
+      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+      itemName: '',
+      colorSelection: 'white',
+      sizeSelection: 'S',
       totalPrice: 0,
-      quantity: '',
+      quantity: 0,
       addToCartClick: false
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
   async componentDidMount() {
     await this.props.getSingleItem(this.props.match.params.itemId)
     console.log(this.props)
+    this.setState({
+      itemName: this.props.singleItem.name
+    })
   }
 
-  handleChange(e) {
+  async handleChange(e) {
     this.setState({
       addToCartClick: false
     })
@@ -38,6 +43,9 @@ export class SingleItem extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     })
+
+    if (e.target.name !== 'quantity')
+      await this.props.changeSingleItem(this.state)
   }
 
   async handleSubmit(e) {
@@ -51,17 +59,32 @@ export class SingleItem extends React.Component {
       totalPrice: newTotalPrice
     })
 
-    console.log(this.props)
-    console.log('this state: ', this.state)
+    let totalQuantity = this.calculateTotalQuantity()
+    console.log(totalQuantity)
+
     await this.props.addItemsToCart(
       this.props.currentOrder.currentOrder[0].id,
-      this.props.match.params.itemId,
-      this.state
+      this.props.singleItem.id,
+      this.state,
+      totalQuantity
     )
 
     this.setState({
       addToCartClick: true
     })
+  }
+
+  calculateTotalQuantity() {
+    console.log(this.state.quantity)
+
+    let totalQuantity = +this.state.quantity
+    console.log(totalQuantity)
+    this.props.currentOrder.currentOrder[0].items.forEach(element => {
+      if (element.OrderContent.itemId === this.props.singleItem.id) {
+        totalQuantity = totalQuantity + element.OrderContent.quantity
+      }
+    })
+    return totalQuantity
   }
 
   render() {
@@ -176,8 +199,11 @@ const mapDispatch = dispatch => {
     getPendingOrder: id => {
       return dispatch(GetOrderPendingThunk(id))
     },
-    addItemsToCart: (orderId, itemId, orderUpdate) => {
-      return dispatch(EditCartThunk(orderId, itemId, orderUpdate))
+    addItemsToCart: (orderId, itemId, orderUpdate, quantity) => {
+      return dispatch(EditCartThunk(orderId, itemId, orderUpdate, quantity))
+    },
+    changeSingleItem: data => {
+      return dispatch(changeSingleItem(data))
     }
   }
 }

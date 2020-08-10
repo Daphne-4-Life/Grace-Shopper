@@ -42,6 +42,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     const item = await Item.findByPk(req.params.id)
     if (!item) {
+      //Is this check necessary given that you have a try/catch clause? If you want to keep it for the custom error message, then why is this not included in the PUT route?
       const error = Error(`Sorry, item ID: ${item} was not found`)
       error.status = 404
       return next(error)

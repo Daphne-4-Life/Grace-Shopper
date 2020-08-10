@@ -2,6 +2,8 @@ const router = require('express').Router()
 const {User, Order, Item, OrderContent} = require('../db/models')
 module.exports = router
 
+//Include route secutiry, i.e. admin middleware
+
 //GET ALL ORDERS (IN CASE WE EVER NEED IT)
 router.get('/', async (req, res, next) => {
   try {
@@ -47,6 +49,7 @@ router.get('/:userId/cart', async (req, res, next) => {
 
 //CREATES A NEW ORDER
 router.post('/:userId', async (req, res, next) => {
+  //Do we need this route?
   try {
     const newOrder = await Order.create()
     const user = await User.findByPk(req.params.userId)
@@ -83,7 +86,7 @@ router.put('/:orderId/cart/:itemId', async (req, res, next) => {
         id: req.params.orderId
       }
     })
-      .then(order => order.update({totalPrice: totalPrice}))
+      .then(order => order.update({totalPrice: totalPrice})) //Don't use both async/await and promises
       .catch(next)
 
     // const updatedOrderContent = await OrderContent.findOrCreate({

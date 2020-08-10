@@ -3,6 +3,7 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const User = db.define('user', {
+  //See comments from first code review
   email: {
     type: Sequelize.STRING,
     unique: true,
@@ -33,7 +34,7 @@ const User = db.define('user', {
   },
   address: {
     type: Sequelize.STRING,
-    defaultValue: '123 10th St, Ny Ny 11249',
+    defaultValue: '123 10th St, Ny Ny 11249', //Do we need a default value?
     allowNull: false
   },
   imageUrl: {
@@ -43,12 +44,12 @@ const User = db.define('user', {
   },
   firstName: {
     type: Sequelize.STRING,
-    defaultValue: 'Jonah',
+    defaultValue: 'Jonah', //Do we need a default value?
     allowNull: false
   },
   lastName: {
     type: Sequelize.STRING,
-    defaultValue: 'Hill',
+    defaultValue: 'Hill', //Do we need a default value?
     allowNull: false
   }
 })

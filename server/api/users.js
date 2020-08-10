@@ -3,6 +3,8 @@ const {User} = require('../db/models')
 const {Order} = require('../db/models')
 module.exports = router
 
+//Include route security and, as applicable, a check that the user accessing/updating the information has the right to do so
+
 //Routes on the root
 router.get('/', async (req, res, next) => {
   try {

@@ -10,7 +10,7 @@ const Item = props => {
       </div>
       <div id="item-info">
         <span>Name: {item.name}</span>
-        <span>Price: {item.price}</span>
+        <span>Price: ${item.price}.00</span>
         <span>Description: {item.description}</span>
         <span>Sizes: S, M, L, XL, XXL</span>
         <span>Colors: black, white, red, orange, blue</span>

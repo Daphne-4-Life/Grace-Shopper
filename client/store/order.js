@@ -87,12 +87,11 @@ const initialState = {
 
 //reducer
 export default function orderReducer(state = initialState, action) {
-  console.log(action)
   switch (action.type) {
     case GET_ALL_ORDERS:
       return {...state, previousOrders: action.orders}
     case GET_PENDING_ORDER:
-      return {...state}
+      return {...state, currentOrder: action.pendingOrder}
     case COMPLETE_ORDER:
       return {
         currentOrder: action.createdOrder,

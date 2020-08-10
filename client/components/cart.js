@@ -7,12 +7,11 @@ import CartItem from './CartItem'
 class Cart extends React.Component {
   componentDidMount() {
     this.props.OrderPending(this.props.user.id)
-    console.log(this.props)
   }
   render() {
-    console.log('currentOrder: ', this.props)
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
-    console.log(currentOrder)
+    let totalPrice = currentOrder.totalPrice || 0
+    let numberOfItems = currentOrder.items || []
 
     return (
       <div>
@@ -25,8 +24,8 @@ class Cart extends React.Component {
           <div className="cartOrderSummary">
             {/* Order Summary */}
             <strong>Order Summary</strong>
-            <p>Items(# of items): </p>
-            <p>Order Total: </p>
+            <p>Items(# of items): {numberOfItems.length}</p>
+            <p>Order Total: ${totalPrice}.00</p>
           </div>
         </div>
 

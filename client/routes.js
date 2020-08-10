@@ -7,6 +7,7 @@ import {me} from './store'
 import SingleItem from './components/SingleItem'
 import AllItems from './components/AllItems'
 import Cart from './components/Cart'
+import EditAccountInfoForm from './components/EditAccountInfoForm'
 /**
  * COMPONENT
  */
@@ -30,7 +31,12 @@ class Routes extends Component {
             <Route path="/allItems" component={AllItems} />
             <Route path="/shortSleeveItems" component={AllItems} />
             <Route path="/longSleeveItems" component={AllItems} />
-            <Route path="/profile" component={Profile} />
+            <Route exact path="/profile" component={Profile} />
+            <Route
+              exact
+              path="/profile/editInfo"
+              component={EditAccountInfoForm}
+            />
             <Route exact path="/orders/:userId/cart" component={Cart} />
             <Route exact path="/items/:itemId" component={SingleItem} />
           </Switch>

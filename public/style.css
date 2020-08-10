@@ -564,11 +564,11 @@ main {
   flex-direction: row;
 }
 
-#profile-image {
+.profile-image {
   margin: 10px;
 }
 
-#profile-body {
+.profile-body {
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -590,6 +590,37 @@ main {
 
 .order-id-and-total-price h4 {
   text-decoration: underline;
+}
+
+.edit-account-info-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-account-info-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#edit-account-info-form small {
+  font-weight: bold;
+}
+
+#edit-account-info-form button {
+  width: 120px;
+  margin: 10px;
+}
+
+#edit-account-info-form label {
+  margin: 5px;
+}
+
+.space {
+  margin: 20px;
 }
 
 /* ---------------- */

@@ -12,7 +12,7 @@ export const UserHome = props => {
   return (
     <div>
       <div id="welcome-user">
-        <h3>Welcome!~ {email}</h3>
+        <h3>Welcome, {email}</h3>
         {/* <img src="img/hero_1.jpg" /> */}
       </div>
       {/* <div id="hero-image">

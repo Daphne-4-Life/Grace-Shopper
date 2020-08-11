@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {fetchSingleItem, changeSingleItem} from '../store/singleItem'
 import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
 import {Modal, Button} from 'react-bootstrap'
+import {locationsAreEqual} from 'history'
 
 export class SingleItem extends React.Component {
   constructor(props) {
@@ -22,6 +23,21 @@ export class SingleItem extends React.Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleCloseModal = this.handleCloseModal.bind(this)
+  }
+
+  setData() {
+    let oldItems = JSON.parse(localStorage.getItem('guestCart')) || []
+
+    let obj = {
+      sizeSelection: this.state.sizeSelection,
+      colorSelection: this.state.colorSelection,
+      quantity: this.state.quantity,
+      itemName: this.state.itemName
+    }
+
+    oldItems.push(obj)
+
+    localStorage.setItem('guestCart', JSON.stringify(oldItems))
   }
 
   async componentDidMount() {
@@ -177,6 +193,7 @@ export class SingleItem extends React.Component {
                     id="singleItemContainerSubmitButton"
                     type="submit"
                     onSubmit={this.handleSubmit}
+                    onClick={() => this.setData()}
                   >
                     Add to Cart
                   </button>

@@ -17,7 +17,15 @@ router.get(
     try {
       const users = await User.findAll(
         {
-          attributes: ['id', 'email', 'isAdmin']
+          attributes: [
+            'id',
+            'email',
+            'isAdmin',
+            'firstName',
+            'lastName',
+            'imageUrl',
+            'address'
+          ]
         },
         {include: Order}
       )

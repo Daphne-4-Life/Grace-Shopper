@@ -48,6 +48,7 @@ export class EditAccountInfoForm extends React.Component {
         <div className="space">
           <p> </p>
         </div>
+
         <form id="edit-account-info-form" onSubmit={this.handleSubmit}>
           <h2>Update Profile Information:</h2>
           <div className="edit-name">

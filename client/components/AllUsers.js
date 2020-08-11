@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
+import {deleteUserThunk, updateUserThunk} from '../store'
 
 export class AllUsers extends React.Component {
   constructor() {
@@ -8,11 +9,25 @@ export class AllUsers extends React.Component {
     this.state = {
       allUsers: []
     }
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   async componentDidMount() {
     const allUsersRes = await axios.get('/api/users')
     this.setState({allUsers: allUsersRes.data})
+  }
+
+  async handleDelete(userId) {
+    console.log('THIS IS THE USER ID ---> ', userId)
+    console.log('THIS IS THE USER ID ---> ', userId)
+    await this.props.deleteUser(userId)
+    this.setState({
+      allUsers: this.state.allUsers.filter(user => {
+        if (user.id !== userId) {
+          return user
+        }
+      })
+    })
   }
 
   render() {
@@ -37,6 +52,14 @@ export class AllUsers extends React.Component {
                 <h4>Address: </h4>
                 <p>{user.address}</p>
               </div>
+              <div className="delete-button">
+                <button
+                  onClick={() => this.handleDelete(+user.id)}
+                  type="button"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         ))
@@ -59,4 +82,10 @@ const mapState = state => {
   }
 }
 
-export default connect(mapState)(AllUsers)
+const mapDispatch = dispatch => {
+  return {
+    deleteUser: userId => dispatch(deleteUserThunk(userId))
+  }
+}
+
+export default connect(mapState, mapDispatch)(AllUsers)

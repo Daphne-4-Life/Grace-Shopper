@@ -64,6 +64,24 @@ export const EditCartThunk = (
   }
 }
 
+//UPDATING ITEM QUANTITY IN CART
+export const EditItemQuantityThunk = (
+  itemId,
+  orderId,
+  quantity,
+  totalPrice
+) => async dispatch => {
+  try {
+    const {data} = await axios.patch(
+      `/api/orders/updateItemQuantity/${orderId}/item/${itemId}`,
+      {updatedQuantity: quantity, updatedTotalPrice: totalPrice}
+    )
+    dispatch(updateOrder(data))
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 //COMPLETE CURRENT ORDER, CREATE NEW ORDER AND SET IT AS PENDING
 export const CompleteOrderThunk = userId => async dispatch => {
   try {

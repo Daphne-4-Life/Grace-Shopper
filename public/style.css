@@ -589,6 +589,27 @@ main {
   font-weight: bold;
   font-style: italic;
 }
+
+.cartItemQuantity {
+  height: 50px;
+  width: 100px;
+}
+
+#cartItemInfo {
+  margin: 4%;
+}
+
+#removeItemFromCartButton {
+  margin: 2%;
+  height: 50px;
+  width: 100px;
+  border: 2px red solid;
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
 /* ---------------- */
 /*   end cart page  */
 /* -----------------*/

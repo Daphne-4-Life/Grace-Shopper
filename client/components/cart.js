@@ -2,7 +2,11 @@
 /* eslint-disable complexity */
 import React from 'react'
 import {connect} from 'react-redux'
-import {GetOrderPendingThunk, CompleteOrderThunk} from '../store/order'
+import {
+  GetOrderPendingThunk,
+  CompleteOrderThunk,
+  EditItemQuantityThunk
+} from '../store/order'
 import CartItem from './CartItem'
 import OrderConfirmation from './OrderConfirmation'
 import {Modal, Button} from 'react-bootstrap'
@@ -26,6 +30,7 @@ class Cart extends React.Component {
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
     this.handleCheckout = this.handleCheckout.bind(this)
     this.handleCloseModal = this.handleCloseModal.bind(this)
+    this.updateItemQuantity = this.updateItemQuantity.bind(this)
   }
   componentDidMount() {
     //if user is logged in
@@ -94,6 +99,36 @@ class Cart extends React.Component {
     }
   }
 
+  async updateItemQuantity(itemId, quantity) {
+    let currentOrderId = this.props.currentOrder.currentOrder[0].id
+    let currentItem = {}
+
+    this.props.currentOrder.currentOrder[0].items.filter(element => {
+      if (element.id === itemId) {
+        currentItem = element
+      }
+    })
+
+    let currentItemPrice = currentItem.price
+    let currentItemQuantity = currentItem.OrderContent.quantity
+
+    let newTotalPrice = 0
+
+    currentItemQuantity > quantity
+      ? (newTotalPrice =
+          this.props.currentOrder.currentOrder[0].totalPrice - currentItemPrice)
+      : (newTotalPrice =
+          this.props.currentOrder.currentOrder[0].totalPrice + currentItemPrice)
+
+    await this.props.UpdateItemQuantity(
+      itemId,
+      currentOrderId,
+      quantity,
+      newTotalPrice
+    )
+    await this.props.OrderPending(this.props.user.id)
+  }
+
   render() {
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
@@ -109,7 +144,13 @@ class Cart extends React.Component {
                 {numberOfItems.length > 0 ? (
                   <div>
                     {numberOfItems.map(item => {
-                      return <CartItem key={item.id} item={item} />
+                      return (
+                        <CartItem
+                          key={item.id}
+                          item={item}
+                          updateQuantity={this.updateItemQuantity}
+                        />
+                      )
                     })}
                   </div>
                 ) : (
@@ -263,6 +304,9 @@ const mapDispatch = dispatch => ({
   },
   CompleteOrder: id => {
     dispatch(CompleteOrderThunk(id))
+  },
+  UpdateItemQuantity: (itemId, orderId, quantity, totalPrice) => {
+    dispatch(EditItemQuantityThunk(itemId, orderId, quantity, totalPrice))
   }
 })
 

@@ -78,6 +78,11 @@ nav ul li a.active {
   width: 50px;
   height: 50px;
 }
+
+#shirt-logo {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
+}
 /* ----------------------------------- */
 
 /* nav {

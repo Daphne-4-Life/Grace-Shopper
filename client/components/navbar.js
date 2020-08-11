@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
@@ -22,15 +22,15 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             </li>
             <li className="nav-item" id="nav-right">
               <NavLink to="#" onClick={handleClick}>
-                Logout
+                <h3>Logout</h3>
               </NavLink>
             </li>
             <li className="nav-item" id="nav-right">
-              <NavLink to="/orders/1/cart">
+              <NavLink to="/cart">
                 <img
                   className="cart-image"
                   src="img/cart_icon_1.png"
-                  alt="User image"
+                  alt="cart image"
                 />
               </NavLink>
             </li>
@@ -40,15 +40,19 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           <ul className="nav-links">
             <li className="nav-item">
-              <NavLink id="shirt-logo" to="/home">
+              <Link id="shirt-logo" to="/home">
                 <h3>The Shirt Shop</h3>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login">
+                <h3>Login</h3>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/login">Login</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/signup">Sign Up</NavLink>
+              <NavLink to="/signup">
+                <h3>Sign Up</h3>
+              </NavLink>
             </li>
           </ul>
         </div>

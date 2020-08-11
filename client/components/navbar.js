@@ -49,9 +49,9 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
         <div>
           <ul className="nav-links">
             <li className="nav-item">
-              <Link id="shirt-logo" to="/home">
+              <NavLink id="shirt-logo" to="/">
                 <h3>The Shirt Shop</h3>
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/login">
@@ -61,6 +61,15 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
             <li className="nav-item">
               <NavLink to="/signup">
                 <h3>Sign Up</h3>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/cart">
+                <img
+                  className="cart-image"
+                  src="img/cart_icon_1.png"
+                  alt="cart image"
+                />
               </NavLink>
             </li>
           </ul>

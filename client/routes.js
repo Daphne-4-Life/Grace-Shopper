@@ -25,22 +25,23 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route exact path="/" component={UserHome} />
+        <Route path="/allItems" component={AllItems} />
+        <Route path="/shortSleeveItems" component={AllItems} />
+        <Route path="/longSleeveItems" component={AllItems} />
+        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/items/:itemId" component={SingleItem} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            <Route exact path="/" component={UserHome} />
-            <Route path="/allItems" component={AllItems} />
-            <Route path="/shortSleeveItems" component={AllItems} />
-            <Route path="/longSleeveItems" component={AllItems} />
             <Route exact path="/profile" component={Profile} />
             <Route
               exact
               path="/profile/editInfo"
               component={EditAccountInfoForm}
             />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/items/:itemId" component={SingleItem} />
-            <Route exact path="/allUsers" component={AllUsers} />``
+            <Route exact path="/allUsers" component={AllUsers} />
+            ``
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

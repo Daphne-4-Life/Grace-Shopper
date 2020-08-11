@@ -8,6 +8,7 @@ class Cart extends React.Component {
   componentDidMount() {
     this.props.OrderPending(this.props.user.id)
   }
+
   render() {
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0

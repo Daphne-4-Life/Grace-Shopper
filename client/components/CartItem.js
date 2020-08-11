@@ -1,32 +1,20 @@
 import React from 'react'
 
-export default function CartItem() {
-  return (
-    <div>
-      <div className="cartItem">
-        {/* represents each item on Cart and would need to map through each item*/}
-        <p>image file</p>
-        <p>item name</p>
-        <p>price</p>
-        <p>quantity</p>
-        <p>total price</p>
+class CartItem extends React.Component {
+  render() {
+    const {item} = this.props
+    return (
+      <div>
+        <div className="cartItem">
+          {/* represents each item on Cart and would need to map through each item*/}
+          <p>{item.name}</p>
+          <p>{item.OrderContent.price}</p>
+          <p>{item.OrderContent.quantity}</p>
+          <p>${item.OrderContent.quantity * item.price}.00</p>
+        </div>
       </div>
-      <div className="cartItem">
-        {/* represents each item on Cart and would need to map through each item*/}
-        <p>image file</p>
-        <p>item name</p>
-        <p>price</p>
-        <p>quantity</p>
-        <p>total price</p>
-      </div>
-      <div className="cartItem">
-        {/* represents each item on Cart and would need to map through each item*/}
-        <p>image file</p>
-        <p>item name</p>
-        <p>price</p>
-        <p>quantity</p>
-        <p>total price</p>
-      </div>
-    </div>
-  )
+    )
+  }
 }
+
+export default CartItem

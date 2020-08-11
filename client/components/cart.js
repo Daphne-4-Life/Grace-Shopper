@@ -6,20 +6,26 @@ import CartItem from './CartItem'
 
 class Cart extends React.Component {
   componentDidMount() {
+    //if user is logged in
     this.props.OrderPending(this.props.user.id)
+    //else
+    //this.props.orderpending(-1)
   }
 
   render() {
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []
+    console.log(currentOrder)
 
     return (
       <div>
         <div className="outerContainer">
           <div className="cart">
             <h1>Your Cart</h1>
-            <CartItem />
+            {numberOfItems.map(item => {
+              return <CartItem key={item.id} item={item} />
+            })}
           </div>
 
           <div className="cartOrderSummary">

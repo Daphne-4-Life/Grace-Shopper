@@ -37,7 +37,7 @@ class Routes extends Component {
               path="/profile/editInfo"
               component={EditAccountInfoForm}
             />
-            <Route exact path="/orders/:userId/cart" component={Cart} />
+            <Route exact path="/cart" component={Cart} />
             <Route exact path="/items/:itemId" component={SingleItem} />
           </Switch>
         )}

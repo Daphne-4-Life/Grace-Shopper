@@ -1,46 +1,32 @@
 const router = require('express').Router()
 const {Order, Item, OrderContent} = require('../db/models')
-const {
-  isLoggedInMiddleware,
-  isAdminMiddleware
-} = require('../app/secureMiddleware')
 module.exports = router
 
 //GET ALL ORDERS (IN CASE WE EVER NEED IT)
-router.get(
-  '/',
-  isLoggedInMiddleware,
-  isAdminMiddleware,
-  async (req, res, next) => {
-    try {
-      const orders = await Order.findAll(req.body)
-      res.json(orders)
-    } catch (error) {
-      next(error)
-    }
+router.get('/', async (req, res, next) => {
+  try {
+    const orders = await Order.findAll(req.body)
+    res.json(orders)
+  } catch (error) {
+    next(error)
   }
-)
+})
 
 //GET ALL PREVIOUS ORDERS
-router.get(
-  '/:userId',
-  isLoggedInMiddleware,
-  isAdminMiddleware,
-  async (req, res, next) => {
-    try {
-      const userOrders = await Order.findAll({
-        include: {model: Item},
-        where: {
-          userId: req.params.userId,
-          status: 'complete'
-        }
-      })
-      res.json(userOrders)
-    } catch (error) {
-      next(error)
-    }
+router.get('/:userId', async (req, res, next) => {
+  try {
+    const userOrders = await Order.findAll({
+      include: {model: Item},
+      where: {
+        userId: req.params.userId,
+        status: 'complete'
+      }
+    })
+    res.json(userOrders)
+  } catch (error) {
+    next(error)
   }
-)
+})
 
 //GET CURRENT PENDING ORDER OR CREATES A NEW ORDER
 //include set parent here

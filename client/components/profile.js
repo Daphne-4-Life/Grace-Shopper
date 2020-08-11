@@ -9,7 +9,7 @@ export class Profile extends React.Component {
   }
 
   render() {
-    const {firstName, lastName, email, address, imageUrl} = this.props
+    const {firstName, lastName, email, address, imageUrl} = this.props || []
 
     return (
       <div className="entire-profile-container">

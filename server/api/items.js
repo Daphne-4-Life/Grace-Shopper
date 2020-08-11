@@ -1,17 +1,24 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
-
-//work on security / admin privileges
+const {
+  isLoggedInMiddleware,
+  isAdminMiddleware
+} = require('../app/secureMiddleware')
 
 // GET items default
-router.get('/', async (req, res, next) => {
-  try {
-    const items = await Item.findAll()
-    res.json(items)
-  } catch (error) {
-    next(error)
+router.get(
+  '/',
+  isLoggedInMiddleware,
+  isAdminMiddleware,
+  async (req, res, next) => {
+    try {
+      const items = await Item.findAll()
+      res.json(items)
+    } catch (error) {
+      next(error)
+    }
   }
-})
+)
 
 //utilize param / combine into one route
 router.get('/longSleeve', async (req, res, next) => {

@@ -13,8 +13,9 @@ export const UserHome = props => {
     <div>
       <div id="welcome-user">
         <h3>
-          Welcome, {firstName[0].toUpperCase()}
-          {firstName.slice(1)}
+          Welcome!
+          {/* Welcome, {firstName[0].toUpperCase()}
+          {firstName.slice(1)} */}
         </h3>
         {/* <img src="img/hero_1.jpg" /> */}
       </div>

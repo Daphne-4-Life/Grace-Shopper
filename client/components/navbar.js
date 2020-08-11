@@ -26,11 +26,11 @@ const Navbar = ({handleClick, isLoggedIn}) => (
               </NavLink>
             </li>
             <li className="nav-item" id="nav-right">
-              <NavLink to="/orders/1/cart">
+              <NavLink to="/cart">
                 <img
                   className="cart-image"
                   src="img/cart_icon_1.png"
-                  alt="User image"
+                  alt="cart image"
                 />
               </NavLink>
             </li>

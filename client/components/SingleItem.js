@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSingleItem, changeSingleItem} from '../store/singleItem'
 import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
+import {Modal, Button} from 'react-bootstrap'
 
 export class SingleItem extends React.Component {
   constructor(props) {
@@ -10,15 +11,17 @@ export class SingleItem extends React.Component {
       colors: ['black', 'white', 'red', 'orange', 'blue'],
       sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       itemName: '',
-      colorSelection: 'white',
-      sizeSelection: 'S',
+      colorSelection: 'Select a color',
+      sizeSelection: 'Select a size',
       totalPrice: 0,
       quantity: 0,
-      addToCartClick: false
+      addToCartClick: false,
+      showModal: false
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
   }
 
   async componentDidMount() {
@@ -68,7 +71,7 @@ export class SingleItem extends React.Component {
     )
 
     this.setState({
-      addToCartClick: true
+      showModal: true
     })
   }
 
@@ -80,6 +83,12 @@ export class SingleItem extends React.Component {
       }
     })
     return totalQuantity
+  }
+
+  handleCloseModal() {
+    this.setState({
+      showModal: false
+    })
   }
 
   render() {
@@ -98,6 +107,14 @@ export class SingleItem extends React.Component {
                   Description: {singleItem.description}
                 </h3>
                 <h4>Price: ${singleItem.price}.00</h4>
+                <div>
+                  <h4>Item Selection:</h4>
+                  <ul>
+                    <li>Size: {this.state.sizeSelection}</li>
+                    <li>Color: {this.state.colorSelection}</li>
+                    <li>Quantity: {this.state.quantity}</li>
+                  </ul>
+                </div>
                 <div id="single-item-info">
                   <strong>Size: </strong>
                   <ul id="singleItemList">
@@ -174,6 +191,37 @@ export class SingleItem extends React.Component {
             <h1>Sorry, Item Does Not Exist.</h1>
           )}
         </div>
+
+        <Modal
+          className="singleItemModal"
+          show={this.state.showModal}
+          onHide={this.handleCloseModal}
+        >
+          <div className="singleItemModalContent">
+            <Modal.Header>
+              <Modal.Title>
+                <h3>Item(s) Added to Cart</h3>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <h4>{singleItem.name}</h4>
+              <ul>
+                <li>Size: {this.state.sizeSelection}</li>
+                <li>Color: {this.state.colorSelection}</li>
+                <li>Quantity: {this.state.quantity}</li>
+              </ul>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                variant="secondary"
+                className="singleItemModalButton"
+                onClick={this.handleCloseModal}
+              >
+                Close
+              </Button>
+            </Modal.Footer>
+          </div>
+        </Modal>
       </div>
     )
   }

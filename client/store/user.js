@@ -47,10 +47,23 @@ export const updateUserThunk = (userId, updateData) => async dispatch => {
   }
 }
 
-export const auth = (email, password, method) => async dispatch => {
+export const auth = (
+  method,
+  email,
+  password,
+  firstName,
+  lastName,
+  address
+) => async dispatch => {
   let res
   try {
-    res = await axios.post(`/auth/${method}`, {email, password})
+    res = await axios.post(`/auth/${method}`, {
+      email,
+      password,
+      firstName,
+      lastName,
+      address
+    })
   } catch (authError) {
     return dispatch(getUser({error: authError}))
   }

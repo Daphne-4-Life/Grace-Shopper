@@ -1,8 +1,6 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
-//work on security / admin privileges
-
 // GET items default
 router.get('/', async (req, res, next) => {
   try {

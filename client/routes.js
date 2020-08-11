@@ -8,6 +8,7 @@ import SingleItem from './components/SingleItem'
 import AllItems from './components/AllItems'
 import Cart from './components/Cart'
 import EditAccountInfoForm from './components/EditAccountInfoForm'
+import AllUsers from './components/AllUsers'
 /**
  * COMPONENT
  */
@@ -39,6 +40,7 @@ class Routes extends Component {
             />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/items/:itemId" component={SingleItem} />
+            <Route exact path="/allUsers" component={AllUsers} />``
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}

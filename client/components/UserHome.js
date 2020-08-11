@@ -7,12 +7,15 @@ import {Link} from 'react-router-dom'
  * COMPONENT
  */
 export const UserHome = props => {
-  const {email} = props
+  const {firstName} = props
 
   return (
     <div>
       <div id="welcome-user">
-        <h3>Welcome, {email}</h3>
+        <h3>
+          Welcome, {firstName[0].toUpperCase()}
+          {firstName.slice(1)}
+        </h3>
         {/* <img src="img/hero_1.jpg" /> */}
       </div>
       {/* <div id="hero-image">
@@ -55,7 +58,7 @@ export const UserHome = props => {
  */
 const mapState = state => {
   return {
-    email: state.user.email
+    firstName: state.user.firstName
   }
 }
 

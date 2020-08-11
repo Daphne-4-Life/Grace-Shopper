@@ -1,9 +1,5 @@
 const router = require('express').Router()
 const {Order, Item, OrderContent} = require('../db/models')
-// const {
-//   isLoggedInMiddleware,
-//   isAdminMiddleware
-// } = require('../app/secureMiddleware')
 module.exports = router
 
 //GET ALL ORDERS (IN CASE WE EVER NEED IT)

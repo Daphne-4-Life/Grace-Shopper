@@ -67,11 +67,11 @@ export const EditCartThunk = (
 //COMPLETE CURRENT ORDER, CREATE NEW ORDER AND SET IT AS PENDING
 export const CompleteOrderThunk = userId => async dispatch => {
   try {
-    const newOrderRes = await axios.post(`/api/orders/:${userId}`)
-    const newOrder = newOrderRes.data
     const completedOrderRes = await axios.put(
       `api/orders/${userId}/cart/complete`
     )
+    const newOrderRes = await axios.get(`/api/orders/${userId}/cart`)
+    const newOrder = newOrderRes.data
     const completedOrder = completedOrderRes.data
     dispatch(completeOrder(newOrder, completedOrder))
   } catch (error) {

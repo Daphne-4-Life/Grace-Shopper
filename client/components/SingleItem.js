@@ -54,8 +54,9 @@ export class SingleItem extends React.Component {
     e.preventDefault()
     await this.props.getPendingOrder(this.props.user.id)
 
+    const currentTotalPrice = this.state.totalPrice
     const newTotalPrice =
-      this.props.currentOrder.currentOrder[0].totalPrice + this.state.totalPrice
+      this.props.currentOrder.currentOrder[0].totalPrice + currentTotalPrice
 
     this.setState({
       totalPrice: newTotalPrice

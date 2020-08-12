@@ -227,7 +227,6 @@ class Cart extends React.Component {
               </div>
               <div>
                 <h1>Shipping Information</h1>
-                <br />
                 <form className="shipping-form">
                   <label>* First Name:</label>
                   <input

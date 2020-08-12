@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSingleItem, changeSingleItem} from '../store/singleItem'
+import {updateItemInventory} from '../store/item'
 import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
 import {Modal, Button} from 'react-bootstrap'
 
@@ -86,6 +87,13 @@ export class SingleItem extends React.Component {
       totalQuantity
     )
 
+    let updatedItemInventory = this.props.singleItem.quantity - totalQuantity
+
+    await this.props.updateItemQuantity(
+      this.props.singleItem.id,
+      updatedItemInventory
+    )
+
     this.setState({
       showModal: true
     })
@@ -109,6 +117,7 @@ export class SingleItem extends React.Component {
 
   render() {
     let singleItem = this.props.singleItem || []
+    console.log(singleItem.quantity)
     return (
       <div>
         <div>
@@ -177,15 +186,22 @@ export class SingleItem extends React.Component {
                 </div>
                 <div id="singleItemQuantity">
                   <strong>Quantity: </strong>
-                  <input
-                    className="singleItemQuantity"
-                    type="number"
-                    id="quantity"
-                    name="quantity"
-                    min="1"
-                    max="10"
-                    onChange={this.handleChange}
-                  />
+
+                  {singleItem.quantity !== 0 ? (
+                    <input
+                      className="singleItemQuantity"
+                      type="number"
+                      id="quantity"
+                      name="quantity"
+                      min="1"
+                      max={singleItem.quantity}
+                      onChange={this.handleChange}
+                    />
+                  ) : (
+                    <h5>
+                      <i>Sorry, this item is out of stock.</i>
+                    </h5>
+                  )}
                 </div>
                 <div>
                   <button
@@ -193,6 +209,12 @@ export class SingleItem extends React.Component {
                     type="submit"
                     onSubmit={this.handleSubmit}
                     onClick={() => this.setData()}
+                    disabled={
+                      singleItem.quantity === 0 ||
+                      this.state.sizeSelection === 'Select a size' ||
+                      this.state.colorSelection === 'Select a color' ||
+                      this.state.quantity === 0
+                    }
                   >
                     Add to Cart
                   </button>
@@ -264,6 +286,9 @@ const mapDispatch = dispatch => {
     },
     changeSingleItem: data => {
       return dispatch(changeSingleItem(data))
+    },
+    updateItemQuantity: (itemId, updatedItemInventory) => {
+      return dispatch(updateItemInventory(itemId, updatedItemInventory))
     }
   }
 }

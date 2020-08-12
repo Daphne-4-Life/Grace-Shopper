@@ -127,6 +127,8 @@ router.patch(
 router.delete(
   '/deleteOrderItem/:orderId/item/:itemId',
   async (req, res, next) => {
+    let currentOrder = await Order.findOne({where: {id: req.params.orderId}})
+    currentOrder.update({totalPrice: req.body.updatedTotalPrice})
     try {
       await OrderContent.destroy({
         where: {

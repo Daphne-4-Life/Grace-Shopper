@@ -9,9 +9,4 @@ const OrderContent = db.define('OrderContent', {
   }
 })
 
-//store historic price - price of specific item
-
-OrderContent.prototype.updateQuantity = function(quantity) {
-  return this.update({quantity: quantity})
-}
 module.exports = OrderContent

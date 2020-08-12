@@ -12,7 +12,7 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
           <ul className="nav-links">
             <li className="nav-item">
               <NavLink id="shirt-logo" to="/">
-                <h3>The Shirt Shop</h3>
+                <h3>Poppin T Shop</h3>
               </NavLink>
             </li>
             <li className="nav-item">
@@ -50,7 +50,7 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
           <ul className="nav-links">
             <li className="nav-item">
               <NavLink id="shirt-logo" to="/">
-                <h3>The Shirt Shop</h3>
+                <h3>Poppin T Shop</h3>
               </NavLink>
             </li>
             <li className="nav-item">

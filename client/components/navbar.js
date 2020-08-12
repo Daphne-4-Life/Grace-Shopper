@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link, NavLink} from 'react-router-dom'
 import {logout} from '../store'
 
-const Navbar = ({handleClick, isLoggedIn}) => (
+const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
   <div>
     <nav className="navbar">
       {isLoggedIn ? (
@@ -12,7 +12,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <ul className="nav-links">
             <li className="nav-item">
               <NavLink id="shirt-logo" to="/">
-                <h3>The Shirt Shop</h3>
+                <h3>Poppin T Shop</h3>
               </NavLink>
             </li>
             <li className="nav-item">
@@ -35,12 +35,21 @@ const Navbar = ({handleClick, isLoggedIn}) => (
                 <h5>Profile</h5>
               </NavLink>
             </li>
-            <li className="nav-item" id="nav-right">
+            <li className="nav-item">
               <NavLink to="#" onClick={handleClick}>
                 <h5>Logout</h5>
               </NavLink>
             </li>
-            <li className="nav-item" id="nav-right">
+            {isAdmin ? (
+              <li className="nav-item">
+                <NavLink to="/allUsers">
+                  <h3>All Users</h3>
+                </NavLink>
+              </li>
+            ) : (
+              ''
+            )}
+            <li className="nav-item">
               <NavLink to="/cart">
                 <img
                   className="cart-image"
@@ -55,9 +64,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           <ul className="nav-links">
             <li className="nav-item">
-              <Link id="shirt-logo" to="/home">
-                <h3>The Shirt Shop</h3>
-              </Link>
+              <NavLink id="shirt-logo" to="/">
+                <h3>Poppin T Shop</h3>
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/login">
@@ -67,6 +76,15 @@ const Navbar = ({handleClick, isLoggedIn}) => (
             <li className="nav-item">
               <NavLink to="/signup">
                 <h3>Sign Up</h3>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/cart">
+                <img
+                  className="cart-image"
+                  src="img/cart_icon_1.png"
+                  alt="cart image"
+                />
               </NavLink>
             </li>
           </ul>
@@ -81,7 +99,8 @@ const Navbar = ({handleClick, isLoggedIn}) => (
  */
 const mapState = state => {
   return {
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    isAdmin: state.user.isAdmin
   }
 }
 

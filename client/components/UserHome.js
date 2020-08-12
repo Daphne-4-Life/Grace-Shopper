@@ -3,26 +3,23 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
-/**
- * COMPONENT
- */
 export const UserHome = props => {
-  const {email} = props
+  // const {firstName} = props
 
   return (
     <div>
       <div id="welcome-user">
-        <h3>Welcome, {email}</h3>
-        {/* <img src="img/hero_1.jpg" /> */}
+        <h3>Welcome To The Poppin T Shop!</h3>
       </div>
-      {/* <div id="hero-image">
-      </div> */}
+      <div id="hero-image">
+        <img src="https://cdn-images.threadless.com/threadless-media/artist_shops/signup_landings/gallery/apparel-tees-large.jpg?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbXX0=/" />
+      </div>
 
       {/* main section */}
       <section className="main-section">
         <div className="item-component">
           <Link to="/allItems" style={{textDecoration: 'none', color: '#FFF'}}>
-            <img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--_qAevh2S--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,h_446,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/1571971050590/Gap-Classic-T-Shirt.jpg" />
+            <img src="http://manufacturerslists.com/wp-content/uploads/2016/09/T-Shirt-Manufacturers.jpg" />
             <h4>All Shirts</h4>
           </Link>
         </div>
@@ -55,7 +52,7 @@ export const UserHome = props => {
  */
 const mapState = state => {
   return {
-    email: state.user.email
+    firstName: state.user.firstName
   }
 }
 

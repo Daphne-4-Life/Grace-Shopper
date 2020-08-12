@@ -26,6 +26,15 @@ export const me = () => async dispatch => {
   }
 }
 
+export const deleteUserThunk = userId => async dispatch => {
+  try {
+    await axios.delete(`/api/users/${userId}`)
+    dispatch(removeUser())
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 export const createUserThunk = user => async dispatch => {
   try {
     const res = await axios.post('/api/users', user)

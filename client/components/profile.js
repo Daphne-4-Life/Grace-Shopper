@@ -53,7 +53,7 @@ export class Profile extends React.Component {
                       </div>
                       <div className="previous-order-item-desc">
                         <h3>{item.name}</h3>
-                        <p>💵 Price: {item.price}</p>
+                        <p>💵 Price: ${item.price}.00</p>
                         <p>👀 Quantity: {item.quantity}</p>
                         <p>🧠 Size: {item.size}</p>
                         <p>🌈 Color: {item.color}</p>

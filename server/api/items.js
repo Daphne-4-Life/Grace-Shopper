@@ -1,7 +1,11 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
+
 // GET items default
+
+// GET all items
+
 router.get('/', async (req, res, next) => {
   try {
     const items = await Item.findAll()
@@ -11,7 +15,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-//utilize param / combine into one route
+// GET all longsleeve items
 router.get('/longSleeve', async (req, res, next) => {
   try {
     const items = await Item.findAll({
@@ -25,6 +29,7 @@ router.get('/longSleeve', async (req, res, next) => {
   }
 })
 
+// GET all shortleeve items
 router.get('/shortSleeve', async (req, res, next) => {
   try {
     const items = await Item.findAll({
@@ -38,7 +43,7 @@ router.get('/shortSleeve', async (req, res, next) => {
   }
 })
 
-//clarify route name
+// GET singleItem
 router.get('/changeSingleItem', async (req, res, next) => {
   const name = req.query.name
   const color = req.query.color
@@ -52,12 +57,6 @@ router.get('/changeSingleItem', async (req, res, next) => {
         size: size
       }
     })
-    if (!item) {
-      //check if error message is necessary
-      const error = Error(`Sorry, item ID: ${item} was not found`)
-      error.status = 404
-      return next(error)
-    }
     res.send(item)
   } catch (error) {
     next(error)
@@ -68,11 +67,6 @@ router.get('/changeSingleItem', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const item = await Item.findByPk(req.params.id)
-    if (!item) {
-      const error = Error(`Sorry, item ID: ${item} was not found`)
-      error.status = 404
-      return next(error)
-    }
     res.send(item)
   } catch (error) {
     next(error)
@@ -104,11 +98,6 @@ router.put('/:id', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
   try {
     const deleteItem = await Item.findByPk(req.params.id)
-    if (!deleteItem) {
-      const error = new Error(`Sorry, item ID: ${deleteItem} was not found`)
-      error.status = 404
-      return next(error)
-    }
     await deleteItem.destroy()
     res.sendStatus(200)
   } catch (error) {

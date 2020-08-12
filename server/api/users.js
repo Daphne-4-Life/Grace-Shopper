@@ -17,7 +17,15 @@ router.get(
     try {
       const users = await User.findAll(
         {
-          attributes: ['id', 'email', 'isAdmin']
+          attributes: [
+            'id',
+            'email',
+            'isAdmin',
+            'firstName',
+            'lastName',
+            'imageUrl',
+            'address'
+          ]
         },
         {include: Order}
       )
@@ -130,7 +138,7 @@ router.get('/:userId/cart', async (req, res, next) => {
 // DELETE route for a user
 router.delete('/:userId', async (req, res, next) => {
   try {
-    const user = await User.findByPk(+req.params.id)
+    const user = await User.findByPk(+req.params.userId)
     if (user) {
       await user.destroy()
       res.sendStatus(204)

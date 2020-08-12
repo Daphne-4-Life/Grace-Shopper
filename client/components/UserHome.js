@@ -3,24 +3,17 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
-/**
- * COMPONENT
- */
 export const UserHome = props => {
-  const {firstName} = props
+  // const {firstName} = props
 
   return (
     <div>
       <div id="welcome-user">
-        <h3>
-          Welcome!
-          {/* Welcome, {firstName[0].toUpperCase()}
-          {firstName.slice(1)} */}
-        </h3>
-        {/* <img src="img/hero_1.jpg" /> */}
+        <h3>Welcome To The Poppin T Shop!</h3>
       </div>
-      {/* <div id="hero-image">
-      </div> */}
+      <div id="hero-image">
+        <img src="https://cdn-images.threadless.com/threadless-media/artist_shops/signup_landings/gallery/apparel-tees-large.jpg?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbXX0=/" />
+      </div>
 
       {/* main section */}
       <section className="main-section">

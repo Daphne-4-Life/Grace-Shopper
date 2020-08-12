@@ -39,7 +39,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -49,7 +49,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -59,7 +59,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -69,7 +69,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -79,7 +79,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //white music shirt
@@ -91,7 +91,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -101,7 +101,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -111,7 +111,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -121,7 +121,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -131,7 +131,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //black music shirt
@@ -143,7 +143,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -153,7 +153,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -163,7 +163,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -173,7 +173,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -183,7 +183,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //red music shirt
@@ -195,7 +195,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -205,7 +205,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -215,7 +215,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -225,7 +225,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -235,7 +235,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //orange music shirt
@@ -247,7 +247,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -257,7 +257,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -267,7 +267,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -277,7 +277,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -286,7 +286,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //athletic shirt
@@ -299,7 +299,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -309,7 +309,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -319,7 +319,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -329,7 +329,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -339,7 +339,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //white Athletic shirt
@@ -351,7 +351,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -361,7 +361,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -371,7 +371,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -381,7 +381,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -391,7 +391,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //black Athletic shirt
@@ -403,7 +403,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -413,7 +413,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -423,7 +423,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -433,7 +433,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -443,7 +443,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //red Athletic shirt
@@ -455,7 +455,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -465,7 +465,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -475,7 +475,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -485,7 +485,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -495,7 +495,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //orange Athletic shirt
@@ -507,7 +507,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -517,7 +517,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -527,7 +527,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -537,7 +537,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -546,7 +546,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //pet shirt
@@ -559,7 +559,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -569,7 +569,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -579,7 +579,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -589,7 +589,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -599,7 +599,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //white Pet shirt
@@ -611,7 +611,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -621,7 +621,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -631,7 +631,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -641,7 +641,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -651,7 +651,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //black Pet shirt
@@ -663,7 +663,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -673,7 +673,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -683,7 +683,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -693,7 +693,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -703,7 +703,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //red Pet shirt
@@ -715,7 +715,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -725,7 +725,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -735,7 +735,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -745,7 +745,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -755,7 +755,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //orange Pet shirt
@@ -767,7 +767,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -777,7 +777,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -787,7 +787,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -797,7 +797,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
     Item.create({
       name: 'Pet Shirt',
@@ -806,7 +806,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
     }),
 
     //custom shirt
@@ -819,7 +819,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -829,7 +829,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -839,7 +839,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -849,7 +849,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -859,7 +859,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
 
     //white Custom shirt
@@ -871,7 +871,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -881,7 +881,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -891,7 +891,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -901,7 +901,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -911,7 +911,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
 
     //black Custom shirt
@@ -923,7 +923,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -933,7 +933,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -943,7 +943,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -953,7 +953,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -963,7 +963,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
 
     //red Custom shirt
@@ -975,7 +975,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -985,7 +985,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -995,7 +995,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1005,7 +1005,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1015,7 +1015,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
 
     //orange Custom shirt
@@ -1027,7 +1027,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1037,7 +1037,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1047,7 +1047,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1057,7 +1057,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     }),
     Item.create({
       name: 'Custom Shirt',
@@ -1066,7 +1066,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://www.topnotchstitching.com/wp-content/uploads/2015/12/t-shirt.jpg'
+        'http://shirtboss.com/1442-thickbox_default/personalized-classic-custom-old-english-t-shirt.jpg'
     })
   ])
 

@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
-// GET items default
+// GET all items
 router.get('/', async (req, res, next) => {
   try {
     const items = await Item.findAll()
@@ -11,7 +11,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-//utilize param / combine into one route
+// GET all longsleeve items
 router.get('/longSleeve', async (req, res, next) => {
   try {
     const items = await Item.findAll({
@@ -25,6 +25,7 @@ router.get('/longSleeve', async (req, res, next) => {
   }
 })
 
+// GET all shortleeve items
 router.get('/shortSleeve', async (req, res, next) => {
   try {
     const items = await Item.findAll({
@@ -38,7 +39,7 @@ router.get('/shortSleeve', async (req, res, next) => {
   }
 })
 
-// GET clarify route name
+// GET singleItem
 router.get('/changeSingleItem', async (req, res, next) => {
   const name = req.query.name
   const color = req.query.color

@@ -1,7 +1,6 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
-
 // GET items default
 
 // GET all items
@@ -88,6 +87,18 @@ router.put('/:id', async (req, res, next) => {
   try {
     const item = await Item.findByPk(req.params.id)
     const updateItem = await item.update(req.body)
+    res.json(updateItem)
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.put('/updateItemInventory/:id', async (req, res, next) => {
+  try {
+    const item = await Item.findByPk(req.params.id)
+    const updateItem = await item.update({
+      quantity: req.body.updatedItemInventory
+    })
     res.json(updateItem)
   } catch (error) {
     next(error)

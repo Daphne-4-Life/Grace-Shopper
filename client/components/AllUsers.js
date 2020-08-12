@@ -18,8 +18,6 @@ export class AllUsers extends React.Component {
   }
 
   async handleDelete(userId) {
-    console.log('THIS IS THE USER ID ---> ', userId)
-    console.log('THIS IS THE USER ID ---> ', userId)
     await this.props.deleteUser(userId)
     this.setState({
       allUsers: this.state.allUsers.filter(user => {

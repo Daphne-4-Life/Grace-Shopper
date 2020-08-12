@@ -131,17 +131,11 @@ class Cart extends React.Component {
     await this.props.OrderPending(this.props.user.id)
   }
 
-  async deleteItemFromOrder(itemId) {
+  async deleteItemFromOrder(itemId, totalItemPrice) {
     let orderId = this.props.currentOrder.currentOrder[0].id
-    // let removeFromTotal = this.props.currentOrder.currentOrder[0].items.filter(
-    //   (item) => item.OrderContent.itemId === itemId
-    // )
-    // console.log('remove from total : ', removeFromTotal)
-    // removeFromTotal = removeFromTotal.quantity * 10
-    // let updatedTotalPrice =
-    //   this.props.currentOrder.currentOrder[0].totalPrice - removeFromTotal
-    // console.log(removeFromTotal)
-    await this.props.DeleteItemFromOrder(orderId, itemId)
+    let updatedTotalPrice =
+      this.props.currentOrder.currentOrder[0].totalPrice - totalItemPrice
+    await this.props.DeleteItemFromOrder(orderId, itemId, updatedTotalPrice)
   }
 
   // getData() {
@@ -157,11 +151,12 @@ class Cart extends React.Component {
     let obj = {
       guestCart: [JSON.parse(localStorage.getItem('guestCart'))]
     }
+    console.log(obj.guestCart)
+    
 
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []
-    console.log(obj.guestCart)
     return (
       <div>
         {!this.state.showOrderConfirmation ? (
@@ -245,7 +240,6 @@ class Cart extends React.Component {
               </div>
               <div>
                 <h1>Shipping Information</h1>
-                <br />
                 <form className="shipping-form">
                   <label>* First Name:</label>
                   <input
@@ -344,8 +338,8 @@ const mapDispatch = dispatch => ({
   UpdateItemQuantity: (itemId, orderId, quantity, totalPrice) => {
     dispatch(EditItemQuantityThunk(itemId, orderId, quantity, totalPrice))
   },
-  DeleteItemFromOrder: (orderId, itemId) => {
-    dispatch(DeleteItemFromOrderThunk(orderId, itemId))
+  DeleteItemFromOrder: (orderId, itemId, updatedTotalPrice) => {
+    dispatch(DeleteItemFromOrderThunk(orderId, itemId, updatedTotalPrice))
   }
 })
 

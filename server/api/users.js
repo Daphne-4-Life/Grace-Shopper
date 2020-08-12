@@ -153,7 +153,6 @@ router.delete('/:userId', async (req, res, next) => {
 router.put('/:userId', async (req, res, next) => {
   try {
     const {updatedFields} = req.body
-    console.log(updatedFields)
     const user = await User.findByPk(req.params.userId)
     await user.update({...updatedFields})
     res.json(user)

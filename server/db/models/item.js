@@ -1,11 +1,13 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-//add string validation
 const Item = db.define('item', {
   name: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   },
   price: {
     type: Sequelize.INTEGER,
@@ -14,9 +16,11 @@ const Item = db.define('item', {
   quantity: {
     type: Sequelize.INTEGER,
     allowNull: false,
-    defaultValue: 0
+    defaultValue: 0,
+    validate: {
+      min: 0
+    }
   },
-  //negative value validation
   imageUrl: {
     type: Sequelize.TEXT,
     allowNull: false,
@@ -37,11 +41,6 @@ const Item = db.define('item', {
     type: Sequelize.ENUM('long sleeve', 'short sleeve'),
     allowNull: false
   }
-  // available: {
-  //   type: Sequelize.BOOLEAN,
-  //   defaultValue: true,
-  // },
-  //not necessary
 })
 
 module.exports = Item

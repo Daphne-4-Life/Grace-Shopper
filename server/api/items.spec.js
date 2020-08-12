@@ -6,7 +6,7 @@ const db = require('../db')
 const app = require('../index')
 const Item = db.model('item')
 
-describe('item routes', () => {
+describe('Item routes', () => {
   beforeEach(() => {
     return db.sync({force: true})
   })

@@ -123,3 +123,20 @@ router.patch(
     }
   }
 )
+
+router.delete(
+  '/deleteOrderItem/:orderId/item/:itemId',
+  async (req, res, next) => {
+    try {
+      await OrderContent.destroy({
+        where: {
+          orderId: req.params.orderId,
+          itemId: req.params.itemId
+        }
+      })
+      res.status(204).end()
+    } catch (error) {
+      next(error)
+    }
+  }
+)

@@ -4,6 +4,7 @@ class CartItem extends React.Component {
   constructor(props) {
     super(props)
     this.updateItemQuantity = this.updateItemQuantity.bind(this)
+    this.deleteItemFromOrder = this.deleteItemFromOrder.bind(this)
   }
 
   updateItemQuantity(e) {
@@ -12,6 +13,11 @@ class CartItem extends React.Component {
       +e.target.value
     )
   }
+
+  deleteItemFromOrder() {
+    this.props.deleteItemFromOrder(this.props.item.id)
+  }
+
   render() {
     const {item} = this.props
     return (
@@ -39,7 +45,11 @@ class CartItem extends React.Component {
             <strong>Total Price: </strong>$
             {item.OrderContent.quantity * item.price}.00
           </div>
-          <button id="removeItemFromCartButton" type="submit">
+          <button
+            id="removeItemFromCartButton"
+            type="submit"
+            onClick={this.deleteItemFromOrder}
+          >
             Delete
           </button>
         </div>

@@ -5,7 +5,8 @@ import {connect} from 'react-redux'
 import {
   GetOrderPendingThunk,
   CompleteOrderThunk,
-  EditItemQuantityThunk
+  EditItemQuantityThunk,
+  DeleteItemFromOrderThunk
 } from '../store/order'
 import CartItem from './CartItem'
 import OrderConfirmation from './OrderConfirmation'
@@ -31,6 +32,7 @@ class Cart extends React.Component {
     this.handleCheckout = this.handleCheckout.bind(this)
     this.handleCloseModal = this.handleCloseModal.bind(this)
     this.updateItemQuantity = this.updateItemQuantity.bind(this)
+    this.deleteItemFromOrder = this.deleteItemFromOrder.bind(this)
   }
   componentDidMount() {
     //if user is logged in
@@ -129,7 +131,22 @@ class Cart extends React.Component {
     await this.props.OrderPending(this.props.user.id)
   }
 
+  async deleteItemFromOrder(itemId) {
+    let orderId = this.props.currentOrder.currentOrder[0].id
+    // let removeFromTotal = this.props.currentOrder.currentOrder[0].items.filter(
+    //   (item) => item.OrderContent.itemId === itemId
+    // )
+    // console.log('remove from total : ', removeFromTotal)
+    // removeFromTotal = removeFromTotal.quantity * 10
+    // let updatedTotalPrice =
+    //   this.props.currentOrder.currentOrder[0].totalPrice - removeFromTotal
+    // console.log(removeFromTotal)
+    await this.props.DeleteItemFromOrder(orderId, itemId)
+  }
+
   render() {
+    console.log(this.props.currentOrder.currentOrder[0])
+
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []
@@ -149,6 +166,7 @@ class Cart extends React.Component {
                           key={item.id}
                           item={item}
                           updateQuantity={this.updateItemQuantity}
+                          deleteItemFromOrder={this.deleteItemFromOrder}
                         />
                       )
                     })}
@@ -307,6 +325,9 @@ const mapDispatch = dispatch => ({
   },
   UpdateItemQuantity: (itemId, orderId, quantity, totalPrice) => {
     dispatch(EditItemQuantityThunk(itemId, orderId, quantity, totalPrice))
+  },
+  DeleteItemFromOrder: (orderId, itemId) => {
+    dispatch(DeleteItemFromOrderThunk(orderId, itemId))
   }
 })
 

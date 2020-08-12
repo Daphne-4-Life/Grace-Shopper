@@ -16,13 +16,28 @@ const Navbar = ({handleClick, isLoggedIn}) => (
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/allItems">
+                <h5>All Items</h5>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/shortSleeveItems">
+                <h5>Short Sleeve Shirts</h5>
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/longSleeveItems">
+                <h5>Long Sleeve Shirts</h5>
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/profile">
-                <h3>Profile</h3>
+                <h5>Profile</h5>
               </NavLink>
             </li>
             <li className="nav-item" id="nav-right">
               <NavLink to="#" onClick={handleClick}>
-                <h3>Logout</h3>
+                <h5>Logout</h5>
               </NavLink>
             </li>
             <li className="nav-item" id="nav-right">

@@ -5,6 +5,7 @@ const GET_ALL_ORDERS = 'GET_ALL_ORDERS'
 const GET_PENDING_ORDER = 'GET_PENDING_ORDER'
 const COMPLETE_ORDER = 'COMPLETE_ORDER'
 const UPDATE_ORDER = 'UPDATE_ORDER'
+const REMOVE_ITEM_FROM_ORDER = 'REMOVE_ITEM_FROM_ORDER'
 
 // action creator
 export const getAllOrdersByUser = orders => ({
@@ -19,6 +20,11 @@ export const completeOrder = (createdOrder, completedOrder) => ({
   type: COMPLETE_ORDER,
   createdOrder,
   completedOrder
+})
+
+export const removeItemFromOrder = itemId => ({
+  type: REMOVE_ITEM_FROM_ORDER,
+  itemId
 })
 export const updateOrder = updatedOrder => ({
   type: UPDATE_ORDER,
@@ -97,6 +103,15 @@ export const CompleteOrderThunk = userId => async dispatch => {
   }
 }
 
+export const DeleteItemFromOrderThunk = (orderId, itemId) => async dispatch => {
+  try {
+    await axios.delete(`api/orders/deleteOrderItem/${orderId}/item/${itemId}`)
+    dispatch(removeItemFromOrder(itemId))
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 //initial state
 const initialState = {
   previousOrders: [],
@@ -117,6 +132,16 @@ export default function orderReducer(state = initialState, action) {
       }
     case UPDATE_ORDER:
       return {...state, currentOrder: action.updatedOrder}
+    case REMOVE_ITEM_FROM_ORDER:
+      let current = [...state.currentOrder]
+      let updatedOrderItems = current[0].items.filter(
+        item => item.id !== action.itemId
+      )
+      current[0].items = updatedOrderItems
+      return {
+        ...state,
+        currentOrder: current
+      }
     default:
       return state
   }

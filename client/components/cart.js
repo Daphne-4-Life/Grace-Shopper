@@ -144,13 +144,24 @@ class Cart extends React.Component {
     await this.props.DeleteItemFromOrder(orderId, itemId)
   }
 
+  // getData() {
+  //   let obj = {
+  //     guestCart: JSON.parse(localStorage.getItem('guestCart'))
+  //   }
+
+  // }
+
   render() {
     console.log(this.props.currentOrder.currentOrder[0])
+
+    let obj = {
+      guestCart: [JSON.parse(localStorage.getItem('guestCart'))]
+    }
 
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []
-
+    console.log(obj.guestCart)
     return (
       <div>
         {!this.state.showOrderConfirmation ? (
@@ -158,6 +169,13 @@ class Cart extends React.Component {
             <div className="outerContainer">
               <div className="cart">
                 <h1>Your Cart</h1>
+
+                {/* tests to see if guestCart maps */}
+                {/* <div>
+                {obj.guestCart.map(item=> {
+                  return item.itemName
+                })}
+                </div> */}
                 {numberOfItems.length > 0 ? (
                   <div>
                     {numberOfItems.map(item => {

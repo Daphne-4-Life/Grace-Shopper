@@ -39,7 +39,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -49,7 +49,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -59,7 +59,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -69,7 +69,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -79,7 +79,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
 
     //white music shirt
@@ -91,7 +91,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -101,7 +101,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -111,7 +111,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -121,7 +121,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -131,7 +131,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
 
     //black music shirt
@@ -143,7 +143,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -153,7 +153,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -163,7 +163,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -173,7 +173,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -183,7 +183,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
 
     //red music shirt
@@ -195,7 +195,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -205,7 +205,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -215,7 +215,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -225,7 +225,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -235,7 +235,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
 
     //orange music shirt
@@ -247,7 +247,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -257,7 +257,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -267,7 +267,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -277,7 +277,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
     Item.create({
       name: 'Music Shirt',
@@ -286,7 +286,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'https://ae01.alicdn.com/kf/HTB1LgAfHVXXXXa0XVXXq6xXFXXXx/Nice-New-Arrival-The-Music-Note-G-Men-s-t-shirt-O-Neck-Cheap-Price-man.jpg'
     }),
 
     //athletic shirt
@@ -299,7 +299,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -309,7 +309,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -319,7 +319,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -329,7 +329,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -339,7 +339,7 @@ async function seed() {
       color: 'blue',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
 
     //white Athletic shirt
@@ -351,7 +351,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -361,7 +361,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -371,7 +371,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -381,7 +381,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -391,7 +391,7 @@ async function seed() {
       color: 'white',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
 
     //black Athletic shirt
@@ -403,7 +403,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -413,7 +413,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -423,7 +423,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -433,7 +433,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -443,7 +443,7 @@ async function seed() {
       color: 'black',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
 
     //red Athletic shirt
@@ -455,7 +455,7 @@ async function seed() {
       color: 'red',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -465,7 +465,7 @@ async function seed() {
       color: 'red',
       size: 'M',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -475,7 +475,7 @@ async function seed() {
       color: 'red',
       size: 'L',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -485,7 +485,7 @@ async function seed() {
       color: 'red',
       size: 'XL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -495,7 +495,7 @@ async function seed() {
       color: 'red',
       size: 'XXL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
 
     //orange Athletic shirt
@@ -507,7 +507,7 @@ async function seed() {
       color: 'orange',
       category: 'short sleeve',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -517,7 +517,7 @@ async function seed() {
       color: 'orange',
       size: 'M',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -527,7 +527,7 @@ async function seed() {
       color: 'orange',
       size: 'L',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -537,7 +537,7 @@ async function seed() {
       color: 'orange',
       size: 'XL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
     Item.create({
       name: 'Athletic Shirt',
@@ -546,7 +546,7 @@ async function seed() {
       category: 'long sleeve',
       size: 'XXL',
       imageUrl:
-        'https://iheartdogs.com/wp-content/uploads/2014/06/4-Legged-Word.jpg'
+        'http://stylesatlife.com/wp-content/uploads/2018/02/Designer-sports-T-shirts.jpg'
     }),
 
     //pet shirt

@@ -4,12 +4,12 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 export const UserHome = props => {
-  // const {firstName} = props
+  const {firstName} = props
 
   return (
     <div>
       <div id="welcome-user">
-        <h3>Welcome To The Poppin T Shop!</h3>
+        <h3>Welcome To The Poppin T Shop, {firstName}!</h3>
       </div>
       <div id="hero-image">
         <img src="https://cdn-images.threadless.com/threadless-media/artist_shops/signup_landings/gallery/apparel-tees-large.jpg?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbXX0=/" />

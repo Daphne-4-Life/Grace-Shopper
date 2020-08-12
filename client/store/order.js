@@ -22,9 +22,10 @@ export const completeOrder = (createdOrder, completedOrder) => ({
   completedOrder
 })
 
-export const removeItemFromOrder = itemId => ({
+export const removeItemFromOrder = (itemId, updatedTotalPrice) => ({
   type: REMOVE_ITEM_FROM_ORDER,
-  itemId
+  itemId,
+  updatedTotalPrice
 })
 export const updateOrder = updatedOrder => ({
   type: UPDATE_ORDER,
@@ -103,10 +104,18 @@ export const CompleteOrderThunk = userId => async dispatch => {
   }
 }
 
-export const DeleteItemFromOrderThunk = (orderId, itemId) => async dispatch => {
+export const DeleteItemFromOrderThunk = (
+  orderId,
+  itemId,
+  updatedTotalPrice
+) => async dispatch => {
   try {
-    await axios.delete(`api/orders/deleteOrderItem/${orderId}/item/${itemId}`)
-    dispatch(removeItemFromOrder(itemId))
+    await axios.delete(`api/orders/deleteOrderItem/${orderId}/item/${itemId}`, {
+      data: {
+        updatedTotalPrice
+      }
+    })
+    dispatch(removeItemFromOrder(itemId, updatedTotalPrice))
   } catch (error) {
     console.log(error)
   }
@@ -137,6 +146,7 @@ export default function orderReducer(state = initialState, action) {
       let updatedOrderItems = current[0].items.filter(
         item => item.id !== action.itemId
       )
+      current[0].totalPrice = action.updatedTotalPrice
       current[0].items = updatedOrderItems
       return {
         ...state,

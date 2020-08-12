@@ -27,7 +27,6 @@ export const changeSingleItem = itemData => {
   searchParams.append('name', itemData.itemName)
   searchParams.append('size', itemData.sizeSelection)
   searchParams.append('color', itemData.colorSelection)
-  console.log(searchParams)
 
   return async dispatch => {
     try {

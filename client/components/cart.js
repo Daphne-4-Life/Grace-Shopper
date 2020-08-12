@@ -131,22 +131,14 @@ class Cart extends React.Component {
     await this.props.OrderPending(this.props.user.id)
   }
 
-  async deleteItemFromOrder(itemId) {
+  async deleteItemFromOrder(itemId, totalItemPrice) {
     let orderId = this.props.currentOrder.currentOrder[0].id
-    // let removeFromTotal = this.props.currentOrder.currentOrder[0].items.filter(
-    //   (item) => item.OrderContent.itemId === itemId
-    // )
-    // console.log('remove from total : ', removeFromTotal)
-    // removeFromTotal = removeFromTotal.quantity * 10
-    // let updatedTotalPrice =
-    //   this.props.currentOrder.currentOrder[0].totalPrice - removeFromTotal
-    // console.log(removeFromTotal)
-    await this.props.DeleteItemFromOrder(orderId, itemId)
+    let updatedTotalPrice =
+      this.props.currentOrder.currentOrder[0].totalPrice - totalItemPrice
+    await this.props.DeleteItemFromOrder(orderId, itemId, updatedTotalPrice)
   }
 
   render() {
-    console.log(this.props.currentOrder.currentOrder[0])
-
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []
@@ -326,8 +318,8 @@ const mapDispatch = dispatch => ({
   UpdateItemQuantity: (itemId, orderId, quantity, totalPrice) => {
     dispatch(EditItemQuantityThunk(itemId, orderId, quantity, totalPrice))
   },
-  DeleteItemFromOrder: (orderId, itemId) => {
-    dispatch(DeleteItemFromOrderThunk(orderId, itemId))
+  DeleteItemFromOrder: (orderId, itemId, updatedTotalPrice) => {
+    dispatch(DeleteItemFromOrderThunk(orderId, itemId, updatedTotalPrice))
   }
 })
 

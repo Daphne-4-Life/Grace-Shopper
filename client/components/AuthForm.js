@@ -14,7 +14,6 @@ const AuthForm = props => {
     handleSignupSubmit,
     error
   } = props
-  console.log(props.match.path)
 
   return (
     <div className="auth-form-container">

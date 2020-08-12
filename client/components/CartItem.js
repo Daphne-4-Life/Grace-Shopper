@@ -15,7 +15,9 @@ class CartItem extends React.Component {
   }
 
   deleteItemFromOrder() {
-    this.props.deleteItemFromOrder(this.props.item.id)
+    let itemTotalPrice =
+      this.props.item.OrderContent.quantity * this.props.item.price
+    this.props.deleteItemFromOrder(this.props.item.id, itemTotalPrice)
   }
 
   render() {
@@ -36,7 +38,7 @@ class CartItem extends React.Component {
               id="quantity"
               name="quantity"
               min="1"
-              max="10"
+              max={item.quantity}
               value={item.OrderContent.quantity}
               onChange={this.updateItemQuantity}
             />

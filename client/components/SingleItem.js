@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {fetchSingleItem, changeSingleItem} from '../store/singleItem'
 import {GetOrderPendingThunk, EditCartThunk} from '../store/order'
 import {Modal, Button} from 'react-bootstrap'
-import {locationsAreEqual} from 'history'
 
 export class SingleItem extends React.Component {
   constructor(props) {

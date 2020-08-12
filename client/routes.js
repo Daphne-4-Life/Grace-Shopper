@@ -9,6 +9,7 @@ import AllItems from './components/AllItems'
 import Cart from './components/Cart'
 import EditAccountInfoForm from './components/EditAccountInfoForm'
 import AllUsers from './components/AllUsers'
+import GuestCart from './components/GuestCart'
 /**
  * COMPONENT
  */
@@ -30,6 +31,7 @@ class Routes extends Component {
         <Route path="/shortSleeveItems" component={AllItems} />
         <Route path="/longSleeveItems" component={AllItems} />
         <Route exact path="/cart" component={Cart} />
+        <Route exact path="/guestCart" component={GuestCart} />
         <Route exact path="/items/:itemId" component={SingleItem} />
         {isLoggedIn && (
           <Switch>

@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function OrderConfirmation(props) {
   const {userInfo} = props || []
+
   return (
     <div>
       <h2>Your Order has been confirmed.</h2>

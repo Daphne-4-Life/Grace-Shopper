@@ -117,7 +117,6 @@ export class SingleItem extends React.Component {
 
   render() {
     let singleItem = this.props.singleItem || []
-    console.log(singleItem.quantity)
     return (
       <div>
         <div>

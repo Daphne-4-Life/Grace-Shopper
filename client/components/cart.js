@@ -139,8 +139,6 @@ class Cart extends React.Component {
   }
 
   render() {
-    console.log(this.props.currentOrder.currentOrder[0])
-
     let currentOrder = this.props.currentOrder.currentOrder[0] || []
     let totalPrice = currentOrder.totalPrice || 0
     let numberOfItems = currentOrder.items || []

@@ -99,8 +99,6 @@ router.put('/updateItemInventory/:id', async (req, res, next) => {
     const updateItem = await item.update({
       quantity: req.body.updatedItemInventory
     })
-    console.log('updated item: ', req.body)
-
     res.json(updateItem)
   } catch (error) {
     next(error)

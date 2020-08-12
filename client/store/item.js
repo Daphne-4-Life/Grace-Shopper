@@ -83,13 +83,11 @@ export const updateItem = item => {
 export const updateItemInventory = (itemId, updatedItemInventory) => {
   return async dispatch => {
     try {
-      console.log('updatedItemInventory: ', updatedItemInventory)
-      console.log('itemid: ', itemId)
       const {data} = await axios.put(
         `/api/items/updateItemInventory/${itemId}`,
         {updatedItemInventory: updatedItemInventory}
       )
-      dispatch(updateItemQuantity(data))
+      dispatch(updateItem(data))
     } catch (error) {
       console.log(error)
     }

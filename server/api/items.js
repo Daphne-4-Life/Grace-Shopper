@@ -1,7 +1,11 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 
+
+// GET items default
+
 // GET all items
+
 router.get('/', async (req, res, next) => {
   try {
     const items = await Item.findAll()

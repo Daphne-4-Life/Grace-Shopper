@@ -91,3 +91,52 @@ router.put('/:orderId/cart/:itemId', async (req, res, next) => {
     next(error)
   }
 })
+
+//Update Order Quantity from cart
+router.patch(
+  '/updateItemQuantity/:orderId/item/:itemId',
+  async (req, res, next) => {
+    try {
+      let {updatedQuantity, updatedTotalPrice} = req.body
+
+      let currentOrder = await Order.findOne({where: {id: req.params.orderId}})
+      currentOrder.update({totalPrice: updatedTotalPrice})
+
+      const updatedOrderContent = OrderContent.findOne({
+        where: {
+          orderId: req.params.orderId,
+          itemId: req.params.itemId
+        }
+      })
+        .then(order => {
+          if (order) {
+            order.update({quantity: updatedQuantity})
+          } else {
+            throw Error('Order Not Found.')
+          }
+        })
+        .catch(next)
+
+      res.json(updatedOrderContent)
+    } catch (error) {
+      next(error)
+    }
+  }
+)
+
+router.delete(
+  '/deleteOrderItem/:orderId/item/:itemId',
+  async (req, res, next) => {
+    try {
+      await OrderContent.destroy({
+        where: {
+          orderId: req.params.orderId,
+          itemId: req.params.itemId
+        }
+      })
+      res.status(204).end()
+    } catch (error) {
+      next(error)
+    }
+  }
+)

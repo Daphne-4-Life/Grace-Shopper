@@ -19,7 +19,7 @@ export const UserHome = props => {
       <section className="main-section">
         <div className="item-component">
           <Link to="/allItems" style={{textDecoration: 'none', color: '#FFF'}}>
-            <img src="https://reviewed-com-res.cloudinary.com/image/fetch/s--_qAevh2S--/b_white,c_limit,cs_srgb,f_auto,fl_progressive.strip_profile,g_center,h_446,q_auto,w_792/https://reviewed-production.s3.amazonaws.com/1571971050590/Gap-Classic-T-Shirt.jpg" />
+            <img src="http://manufacturerslists.com/wp-content/uploads/2016/09/T-Shirt-Manufacturers.jpg" />
             <h4>All Shirts</h4>
           </Link>
         </div>

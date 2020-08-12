@@ -590,8 +590,12 @@ main {
   flex: 1;
 }
 
-.previous-order-item-img {
+.previous-order-item-img img {
   margin: 10px;
+  width: 370px;
+  padding: 0px;
+  flex: 1;
+  padding-right: 40px;
 }
 
 .previous-order-item-desc {
@@ -603,8 +607,12 @@ main {
   flex-direction: row;
 }
 
-.profile-image {
-  margin: 10px;
+.profile-image,
+.previous-order-item-img {
+  display: flex;
+  width: 370px;
+  padding: 20px;
+  flex: 1;
 }
 
 .profile-body {

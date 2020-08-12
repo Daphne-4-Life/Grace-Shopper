@@ -32,7 +32,9 @@ export class SingleItem extends React.Component {
       sizeSelection: this.state.sizeSelection,
       colorSelection: this.state.colorSelection,
       quantity: this.state.quantity,
-      itemName: this.state.itemName
+      itemName: this.state.itemName,
+      itemPrice: this.props.singleItem.price,
+      totalPrice: this.state.totalPrice
     }
 
     oldItems.push(obj)

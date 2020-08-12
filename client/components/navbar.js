@@ -79,7 +79,7 @@ const Navbar = ({handleClick, isLoggedIn, isAdmin}) => (
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart">
+              <NavLink to={isLoggedIn ? '/cart' : '/guestCart'}>
                 <img
                   className="cart-image"
                   src="img/cart_icon_1.png"

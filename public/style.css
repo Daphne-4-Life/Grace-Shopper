@@ -96,6 +96,7 @@ nav ul li a.active {
 /* ------------------- */
 
 form div {
+  /* display: flex; */
   margin: 1em;
   display: inline-block;
 }
@@ -108,20 +109,26 @@ form div {
   text-align: center;
 }
 
+.auth-form-container label {
+  /* text-align: left; */
+}
+
 .auth-form-login,
 .auth-form-signup {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px 2px;
   margin: 2%;
-  text-align: cenleftter;
+  text-align: center;
   align-items: center;
   display: flex;
   background-color: white;
-  width: 300px;
+  width: 330px;
   height: 300px;
+  padding-top: 10px;
+  margin-top: 100px;
 }
 
 .auth-form-signup {
-  width: 300px;
+  width: 330px;
   height: 400px;
 }
 

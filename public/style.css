@@ -559,7 +559,7 @@ main {
 }
 
 .billing-form label,
-.shipping-form input {
+.shipping-form label {
   padding-top: 15px;
   padding-bottom: 2px;
 }
